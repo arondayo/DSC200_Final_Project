@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bSoup
 from selenium import webdriver
 import pandas as pd
 
-def apartments_scrape(url: str, pages: int = None):
+def apartments_scrape(url: str, pages: int = None) -> pd.DataFrame:
     # receives url and number of pages as arguments (if left empty will scrape all available pages)
     #   url examples
     #       https://www.apartments.com/new-york-ny/
@@ -131,6 +131,7 @@ def apartments_scrape(url: str, pages: int = None):
     df = pd.DataFrame(rows, columns=headers)
     print(f'results saved to: data/apartments.com_{url.split('/')[3]}_scrape.csv')
     df.to_csv(f'data/apartments.com_{url.split('/')[3]}_scrape.csv', index=False)
+    return df
 
 if __name__ == '__main__':
     apartments_scrape('https://www.apartments.com/chicago-il/')

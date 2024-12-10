@@ -6,7 +6,7 @@ import requests as rq
 # from selenium import webdriver
 import pandas as pd
 
-def chicago_properties_scrape():
+def chicago_properties_scrape() -> pd.DataFrame:
     chicago_zip_codes = [
         60290, 60601, 60602, 60603, 60604, 60605, 60606, 60607, 60608, 60610, 60611, 60614, 60615, 60618, 60619,
         60622, 60623, 60624, 60628, 60609, 60612, 60613, 60616, 60617, 60620, 60621, 60625, 60626, 60629, 60630,
@@ -20,6 +20,7 @@ def chicago_properties_scrape():
     rows = []
 
     print('Scraping data from bestchicagoproperties.com')
+    print(f'Scanning through {len(chicago_zip_codes)} zipcodes...\n')
     print('Zip code\tListings')
     for zip_code in chicago_zip_codes:
         time.sleep(1)
@@ -58,6 +59,7 @@ def chicago_properties_scrape():
     df = pd.DataFrame(rows, columns=headers)
     print(f'results saved to: data/bestchicagoproperties.com_scrape.csv')
     df.to_csv(f'data/bestchicagoproperties.com_scrape.csv', index=False)
+    return df
 
 if __name__ == '__main__':
     chicago_properties_scrape()
