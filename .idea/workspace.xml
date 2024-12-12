@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="432175e3-6643-4ebf-903d-55e51a6cf01f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api_housing_trends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demographic_by_zip.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/government-policy-report.py" afterDir="false" />
+    <list default="true" id="432175e3-6643-4ebf-903d-55e51a6cf01f" name="Changes" comment="Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_housing_trends.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_housing_trends.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/chicago-housing-policy-report.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/chicago-housing-policy-report.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cleaned_file.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/housing-trends.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/housing-trends.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demographic_by_zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/demographic_by_zip.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/government-policy-report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,18 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "StevenWeil"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;StevenWeil&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/arondayo/DSC200_Final_Project",
-    "accountId": "3a61ac81-f697-48aa-abc7-26aba6bbc1c7"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/arondayo/DSC200_Final_Project&quot;,
+    &quot;accountId&quot;: &quot;3a61ac81-f697-48aa-abc7-26aba6bbc1c7&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -52,6 +56,7 @@
     "Python.demographic_by_zip.executor": "Run",
     "Python.government-policy-report.executor": "Run",
     "Python.government_policy_report.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
@@ -78,16 +83,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733592453033</updated>
-      <workItem from="1733978763697" duration="7931000" />
+      <workItem from="1733978763697" duration="8815000" />
+      <workItem from="1734028435326" duration="7503000" />
     </task>
+    <task id="LOCAL-00001" summary="Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.">
+      <option name="closed" value="true" />
+      <created>1733989155092</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733989155092</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed." />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DSC200_Final_Project$api_housing_trends.coverage" NAME="api_housing_trends Coverage Results" MODIFIED="1733988828819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DSC200_Final_Project$demographic_by_zip.coverage" NAME="demographic_by_zip Coverage Results" MODIFIED="1733978856260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DSC200_Final_Project$government_policy_report.coverage" NAME="government-policy-report Coverage Results" MODIFIED="1733982537764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSC200_Final_Project$api_housing_trends.coverage" NAME="api_housing_trends Coverage Results" MODIFIED="1734029185229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSC200_Final_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1734040232948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSC200_Final_Project$demographic_by_zip.coverage" NAME="demographic_by_zip Coverage Results" MODIFIED="1734039754710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DSC200_Final_Project$government_policy_report.coverage" NAME="government-policy-report Coverage Results" MODIFIED="1734028722898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

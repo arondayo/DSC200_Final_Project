@@ -1,0 +1,476 @@
+Index: data/filtered_demographics_by_zip.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>,Zip Code,Total population,Population Under 5 years,Population 5 to 9 years,Population 10 to 14 years,Population 15 to 19 years,Population 20 to 24 years,Population 25 to 29 years,Population 30 to 34 years,Population 35 to 39 years,Population 40 to 44 years,Population 45 to 49 years,Population 50 to 54 years,Population 55 to 59 years,Population 60 to 64 years,Population 65 to 69 years,Population 70 to 74 years,Population 75 to 79 years,Population 80 to 84 years,Population 85 years and over\r\n0,60601,\"16,292\",657,383,254,409,\"1,650\",\"3,085\",\"2,254\",\"1,828\",820,784,545,726,775,\"1,031\",503,453,134,1\r\n1,60602,\"1,127\",61,62,20,72,124,191,365,0,18,40,92,21,20,22,1,0,18,0\r\n2,60603,\"1,126\",8,12,13,54,261,31,198,49,42,52,61,47,96,97,85,4,16,0\r\n3,60604,653,0,0,0,33,0,61,208,17,13,5,38,32,90,52,24,61,19,0\r\n4,60605,\"34,256\",\"1,248\",954,623,\"2,148\",\"2,913\",\"6,252\",\"5,736\",\"3,677\",\"1,691\",\"1,388\",\"1,003\",\"1,103\",\"1,408\",\"1,071\",\"1,258\",\"1,161\",316,306\r\n5,60606,\"3,527\",66,48,0,0,494,611,560,671,272,132,259,195,63,25,27,104,0,0\r\n6,60607,\"30,197\",\"1,282\",852,546,\"2,395\",\"3,645\",\"5,088\",\"4,838\",\"3,150\",\"2,442\",\"1,598\",\"1,223\",725,982,460,232,306,20,413\r\n7,60608,\"81,459\",\"3,407\",\"3,571\",\"4,241\",\"4,073\",\"7,666\",\"9,305\",\"9,187\",\"7,080\",\"5,819\",\"4,296\",\"4,846\",\"4,737\",\"4,026\",\"3,903\",\"2,343\",\"1,335\",739,885\r\n8,60609,\"64,268\",\"3,611\",\"4,198\",\"5,248\",\"5,036\",\"4,244\",\"5,268\",\"4,344\",\"4,376\",\"5,023\",\"4,475\",\"4,144\",\"3,984\",\"2,935\",\"2,711\",\"2,050\",\"1,353\",611,657\r\n9,60610,\"45,282\",\"1,292\",\"1,198\",982,\"1,637\",\"4,520\",\"9,756\",\"6,479\",\"2,975\",\"1,775\",\"1,605\",\"1,901\",\"2,231\",\"2,260\",\"1,883\",\"1,857\",\"1,270\",759,902\r\n10,60611,\"36,036\",\"1,017\",574,600,184,\"3,281\",\"6,209\",\"4,096\",\"2,945\",\"2,286\",\"1,184\",\"1,232\",\"2,884\",\"2,153\",\"2,047\",\"2,197\",\"1,311\",\"1,001\",835\r\n11,60612,\"34,699\",\"1,412\",\"2,162\",\"2,289\",\"1,908\",\"2,405\",\"3,667\",\"3,417\",\"2,896\",\"2,961\",\"2,416\",\"1,903\",\"1,809\",\"1,645\",\"1,435\",\"1,214\",450,415,295\r\n12,60613,\"51,334\",\"2,299\",\"1,646\",\"1,259\",889,\"4,358\",\"8,746\",\"7,451\",\"5,802\",\"3,292\",\"2,797\",\"3,037\",\"2,277\",\"2,239\",\"1,793\",\"1,512\",759,503,675\r\n13,60614,\"70,444\",\"3,243\",\"2,666\",\"2,601\",\"4,042\",\"7,582\",\"12,685\",\"8,913\",\"4,959\",\"3,661\",\"3,189\",\"3,458\",\"3,247\",\"3,186\",\"2,081\",\"1,938\",\"1,426\",826,741\r\n14,60615,\"42,752\",\"1,725\",\"1,906\",\"2,054\",\"2,458\",\"4,331\",\"5,110\",\"3,740\",\"3,334\",\"2,805\",\"2,160\",\"2,279\",\"2,415\",\"2,399\",\"2,209\",\"1,659\",\"1,075\",562,531\r\n15,60616,\"54,456\",\"2,355\",\"1,757\",\"2,346\",\"2,141\",\"3,916\",\"5,949\",\"5,902\",\"4,621\",\"3,212\",\"3,335\",\"3,450\",\"3,271\",\"3,026\",\"2,966\",\"2,206\",\"1,404\",\"1,038\",\"1,561\"\r\n16,60617,\"79,284\",\"4,679\",\"4,870\",\"6,702\",\"5,171\",\"4,887\",\"4,933\",\"5,025\",\"4,797\",\"5,038\",\"4,219\",\"4,914\",\"4,862\",\"5,266\",\"4,531\",\"3,654\",\"2,193\",\"1,419\",\"2,124\"\r\n17,60618,\"91,896\",\"6,005\",\"4,903\",\"5,316\",\"4,728\",\"4,861\",\"8,202\",\"10,653\",\"9,135\",\"8,087\",\"6,693\",\"5,392\",\"5,125\",\"3,914\",\"2,409\",\"2,916\",\"1,414\",\"1,024\",\"1,119\"\r\n18,60619,\"59,892\",\"3,224\",\"2,853\",\"3,634\",\"3,931\",\"3,408\",\"4,167\",\"3,824\",\"3,871\",\"3,742\",\"2,903\",\"3,937\",\"4,518\",\"4,323\",\"3,619\",\"2,849\",\"2,053\",\"1,360\",\"1,676\"\r\n19,60620,\"66,511\",\"4,326\",\"3,565\",\"5,039\",\"4,625\",\"4,038\",\"4,390\",\"4,210\",\"4,039\",\"4,173\",\"2,821\",\"4,578\",\"4,230\",\"3,679\",\"3,908\",\"2,915\",\"2,679\",\"1,708\",\"1,588\"\r\n20,60621,\"27,318\",\"1,192\",\"1,508\",\"1,877\",\"1,956\",\"1,466\",\"2,334\",\"1,801\",\"1,687\",\"1,693\",\"1,516\",\"1,657\",\"2,004\",\"1,891\",\"1,655\",\"1,035\",577,694,775\r\n21,60622,\"53,696\",\"3,034\",\"1,742\",\"1,520\",963,\"2,977\",\"10,431\",\"11,044\",\"6,054\",\"4,074\",\"2,299\",\"2,516\",\"1,559\",\"1,512\",\"1,125\",\"1,018\",654,506,668\r\n22,60623,\"77,061\",\"5,003\",\"4,960\",\"5,674\",\"5,953\",\"5,058\",\"6,645\",\"5,064\",\"4,913\",\"4,984\",\"5,217\",\"4,284\",\"4,531\",\"3,998\",\"3,034\",\"3,669\",\"1,943\",\"1,025\",\"1,106\"\r\n23,60624,\"35,711\",\"2,378\",\"2,245\",\"3,215\",\"2,889\",\"2,632\",\"2,833\",\"2,130\",\"2,492\",\"2,236\",\"1,990\",\"1,301\",\"2,305\",\"2,823\",\"1,618\",749,777,622,476\r\n24,60625,\"78,467\",\"4,377\",\"4,245\",\"3,883\",\"4,813\",\"5,431\",\"6,423\",\"8,226\",\"8,866\",\"5,920\",\"4,872\",\"5,195\",\"3,942\",\"3,363\",\"3,364\",\"1,965\",\"1,381\",\"1,105\",\"1,096\"\r\n25,60626,\"50,027\",\"2,397\",\"2,093\",\"1,664\",\"3,171\",\"4,981\",\"4,787\",\"4,961\",\"4,120\",\"3,498\",\"3,498\",\"2,731\",\"3,625\",\"2,662\",\"1,851\",\"1,831\",\"1,007\",582,568\r\n26,60628,\"59,212\",\"3,221\",\"3,327\",\"3,697\",\"3,212\",\"4,091\",\"4,501\",\"3,334\",\"3,309\",\"3,392\",\"3,382\",\"4,249\",\"3,623\",\"4,120\",\"2,707\",\"3,215\",\"2,008\",\"1,986\",\"1,838\"\r\n27,60629,\"109,292\",\"7,201\",\"7,758\",\"8,144\",\"8,155\",\"9,933\",\"7,548\",\"6,740\",\"6,176\",\"8,057\",\"8,162\",\"6,906\",\"5,344\",\"5,044\",\"3,379\",\"3,832\",\"4,108\",\"1,493\",\"1,312\"\r\n28,60630,\"54,242\",\"3,321\",\"2,915\",\"2,492\",\"2,698\",\"3,028\",\"2,867\",\"4,349\",\"4,469\",\"3,867\",\"3,840\",\"4,001\",\"3,154\",\"4,083\",\"3,858\",\"2,379\",\"1,225\",850,846\r\n29,60631,\"30,308\",\"2,114\",\"2,270\",\"1,649\",\"1,397\",\"1,282\",\"1,194\",\"1,638\",\"2,856\",\"1,520\",\"1,759\",\"2,579\",\"2,251\",\"1,868\",\"1,739\",\"1,274\",739,677,\"1,502\"\r\n30,60632,\"87,831\",\"4,676\",\"5,212\",\"7,659\",\"6,463\",\"6,953\",\"6,534\",\"6,990\",\"5,304\",\"5,541\",\"5,594\",\"5,832\",\"6,243\",\"4,326\",\"3,073\",\"3,130\",\"2,156\",786,\"1,359\"\r\n31,60633,\"12,485\",556,\"1,102\",940,720,591,763,897,\"1,051\",645,570,\"1,015\",817,751,798,458,299,223,289\r\n32,60634,\"74,418\",\"3,294\",\"3,766\",\"5,532\",\"4,460\",\"4,061\",\"4,009\",\"5,248\",\"4,896\",\"5,750\",\"5,057\",\"6,292\",\"5,447\",\"5,310\",\"3,227\",\"3,048\",\"2,307\",\"1,353\",\"1,361\"\r\n33,60636,\"31,007\",\"1,983\",\"1,864\",\"1,864\",\"2,189\",\"2,352\",\"2,380\",\"2,774\",\"1,838\",\"1,691\",\"1,439\",917,\"2,348\",\"1,802\",\"1,477\",\"1,546\",\"1,215\",719,609\r\n34,60637,\"52,418\",\"2,942\",\"3,645\",\"2,972\",\"5,861\",\"5,183\",\"4,388\",\"3,753\",\"2,686\",\"3,023\",\"2,701\",\"2,671\",\"2,440\",\"3,105\",\"2,675\",\"1,589\",\"1,103\",782,899\r\n35,60638,\"58,250\",\"3,267\",\"4,472\",\"3,951\",\"3,745\",\"3,006\",\"3,581\",\"3,862\",\"4,570\",\"3,705\",\"4,587\",\"4,051\",\"3,323\",\"3,610\",\"3,099\",\"1,796\",\"1,334\",988,\"1,303\"\r\n36,60639,\"84,505\",\"5,220\",\"5,678\",\"6,248\",\"6,433\",\"6,159\",\"5,267\",\"5,721\",\"6,380\",\"5,348\",\"5,507\",\"5,033\",\"4,563\",\"5,082\",\"4,372\",\"3,323\",\"1,813\",\"1,172\",\"1,186\"\r\n37,60640,\"66,884\",\"2,878\",\"2,203\",\"1,509\",\"1,639\",\"3,742\",\"9,153\",\"8,892\",\"7,680\",\"4,898\",\"3,966\",\"4,023\",\"4,341\",\"3,020\",\"2,694\",\"1,640\",\"1,749\",\"1,369\",\"1,488\"\r\n38,60641,\"67,400\",\"4,153\",\"3,963\",\"3,997\",\"3,902\",\"3,877\",\"4,555\",\"5,994\",\"5,304\",\"5,274\",\"4,897\",\"4,905\",\"4,152\",\"4,020\",\"2,823\",\"2,471\",\"1,355\",830,928\r\n39,60642,\"21,124\",\"1,046\",329,315,384,\"1,210\",\"4,994\",\"4,199\",\"2,771\",\"1,402\",\"1,116\",732,704,525,747,249,174,133,94\r\n40,60643,\"47,802\",\"2,607\",\"2,862\",\"3,801\",\"2,862\",\"2,366\",\"2,292\",\"3,000\",\"2,552\",\"2,993\",\"2,795\",\"3,267\",\"3,226\",\"3,465\",\"2,931\",\"2,276\",\"1,393\",\"1,346\",\"1,768\"\r\n41,60644,\"48,317\",\"3,876\",\"3,555\",\"3,384\",\"2,901\",\"2,754\",\"2,985\",\"3,587\",\"2,810\",\"3,733\",\"2,814\",\"3,588\",\"1,992\",\"3,296\",\"2,625\",\"1,868\",\"1,094\",829,626\r\n42,60645,\"46,856\",\"3,700\",\"3,382\",\"3,620\",\"2,721\",\"2,428\",\"3,328\",\"2,980\",\"2,405\",\"3,455\",\"3,400\",\"3,018\",\"2,739\",\"2,579\",\"3,060\",\"1,504\",\"1,227\",791,519\r\n43,60646,\"28,499\",\"1,939\",\"2,004\",\"1,413\",\"1,833\",923,\"1,287\",\"1,662\",\"1,985\",\"2,232\",\"1,682\",\"1,560\",\"1,801\",\"2,365\",\"1,648\",\"1,778\",980,638,769\r\n44,60647,\"85,589\",\"5,304\",\"4,039\",\"3,209\",\"3,103\",\"5,560\",\"13,206\",\"14,129\",\"9,924\",\"5,781\",\"4,586\",\"3,542\",\"3,551\",\"2,975\",\"2,456\",\"1,552\",\"1,084\",584,\"1,004\"\r\n45,60649,\"48,720\",\"3,174\",\"3,061\",\"2,607\",\"2,023\",\"2,424\",\"4,229\",\"4,123\",\"2,978\",\"3,301\",\"2,587\",\"3,178\",\"3,115\",\"3,696\",\"3,140\",\"2,218\",\"1,107\",854,905\r\n46,60651,\"63,892\",\"4,325\",\"3,999\",\"5,282\",\"4,597\",\"4,729\",\"4,833\",\"4,398\",\"4,101\",\"4,194\",\"4,223\",\"3,406\",\"3,887\",\"3,578\",\"2,728\",\"2,613\",\"1,209\",821,969\r\n47,60652,\"41,431\",\"2,108\",\"2,500\",\"3,020\",\"3,220\",\"2,835\",\"2,881\",\"2,676\",\"2,452\",\"3,022\",\"2,783\",\"2,802\",\"2,418\",\"3,097\",\"2,232\",\"1,394\",929,481,581\r\n48,60653,\"34,608\",\"2,774\",\"1,719\",\"2,445\",\"2,167\",\"2,022\",\"2,706\",\"2,947\",\"2,517\",\"1,700\",\"1,921\",\"2,360\",\"1,715\",\"1,900\",\"1,780\",\"1,612\",845,608,870\r\n49,60654,\"24,303\",722,299,129,214,\"2,013\",\"6,238\",\"4,193\",\"2,679\",\"1,681\",906,\"1,264\",\"1,172\",998,774,642,178,109,92\r\n50,60655,\"27,794\",\"1,702\",\"1,846\",\"2,332\",\"1,902\",\"1,375\",\"1,115\",\"1,645\",\"1,656\",\"2,163\",\"1,845\",\"1,975\",\"1,997\",\"1,971\",\"1,555\",\"1,219\",648,400,448\r\n51,60656,\"28,726\",\"1,844\",\"1,626\",\"1,510\",\"1,223\",\"1,046\",\"1,887\",\"2,777\",\"1,643\",\"2,539\",\"2,178\",\"1,640\",\"1,697\",\"2,352\",\"1,942\",862,673,717,570\r\n52,60657,\"71,268\",\"3,924\",\"2,389\",\"1,610\",\"1,356\",\"7,955\",\"15,366\",\"9,813\",\"7,291\",\"4,006\",\"2,878\",\"3,421\",\"2,083\",\"2,497\",\"2,037\",\"1,643\",\"1,349\",784,866\r\n53,60659,\"42,008\",\"3,044\",\"2,614\",\"3,184\",\"3,785\",\"2,299\",\"2,286\",\"2,711\",\"3,067\",\"2,614\",\"2,644\",\"2,641\",\"2,688\",\"2,408\",\"2,295\",\"1,589\",681,620,838\r\n54,60660,\"42,750\",\"1,502\",\"1,420\",\"1,110\",\"2,831\",\"3,505\",\"4,673\",\"4,477\",\"3,773\",\"2,809\",\"2,816\",\"2,317\",\"2,480\",\"2,657\",\"1,999\",\"1,514\",\"1,540\",565,762\r\n55,60661,\"11,516\",469,246,50,65,684,\"2,539\",\"2,643\",\"1,986\",901,592,570,181,252,170,83,24,0,61\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/filtered_demographics_by_zip.csv b/data/filtered_demographics_by_zip.csv
+--- a/data/filtered_demographics_by_zip.csv	(revision 8487dc674a042fa4e199332e0f00f27154458594)
++++ b/data/filtered_demographics_by_zip.csv	(date 1734045258117)
+@@ -1,4 +1,4 @@
+-,Zip Code,Total population,Population Under 5 years,Population 5 to 9 years,Population 10 to 14 years,Population 15 to 19 years,Population 20 to 24 years,Population 25 to 29 years,Population 30 to 34 years,Population 35 to 39 years,Population 40 to 44 years,Population 45 to 49 years,Population 50 to 54 years,Population 55 to 59 years,Population 60 to 64 years,Population 65 to 69 years,Population 70 to 74 years,Population 75 to 79 years,Population 80 to 84 years,Population 85 years and over
++,zipcode,Total population,Population Under 5 years,Population 5 to 9 years,Population 10 to 14 years,Population 15 to 19 years,Population 20 to 24 years,Population 25 to 29 years,Population 30 to 34 years,Population 35 to 39 years,Population 40 to 44 years,Population 45 to 49 years,Population 50 to 54 years,Population 55 to 59 years,Population 60 to 64 years,Population 65 to 69 years,Population 70 to 74 years,Population 75 to 79 years,Population 80 to 84 years,Population 85 years and over
+ 0,60601,"16,292",657,383,254,409,"1,650","3,085","2,254","1,828",820,784,545,726,775,"1,031",503,453,134,1
+ 1,60602,"1,127",61,62,20,72,124,191,365,0,18,40,92,21,20,22,1,0,18,0
+ 2,60603,"1,126",8,12,13,54,261,31,198,49,42,52,61,47,96,97,85,4,16,0
+Index: demographic_by_zip.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pandas as pd\r\n\r\n# Function to handle Excel file processing\r\ndef process_excel():\r\n    # Specify the Excel file path\r\n    file_path = 'data/income_by_zip.xlsx'\r\n\r\n    # Load the Excel file with the first row as the header\r\n    df = pd.read_excel(file_path)\r\n\r\n    # Drop rows two and three (index 1 and 2)\r\n    df = df.drop([1, 2, 4])\r\n\r\n    # List of zip codes and corresponding median incomes.\r\n    zip_codes = [\r\n        \"Unnamed: 0\", \"ZCTA5 60601\", \"ZCTA5 60602\", \"ZCTA5 60603\", \"ZCTA5 60604\", \"ZCTA5 60605\", \"ZCTA5 60606\",\r\n        \"ZCTA5 60607\", \"ZCTA5 60608\", \"ZCTA5 60609\", \"ZCTA5 60610\", \"ZCTA5 60611\", \"ZCTA5 60612\",\r\n        \"ZCTA5 60613\", \"ZCTA5 60614\", \"ZCTA5 60615\", \"ZCTA5 60616\", \"ZCTA5 60617\", \"ZCTA5 60618\",\r\n        \"ZCTA5 60619\", \"ZCTA5 60620\", \"ZCTA5 60621\", \"ZCTA5 60622\", \"ZCTA5 60623\", \"ZCTA5 60624\",\r\n        \"ZCTA5 60625\", \"ZCTA5 60626\", \"ZCTA5 60628\", \"ZCTA5 60629\", \"ZCTA5 60630\", \"ZCTA5 60631\",\r\n        \"ZCTA5 60632\", \"ZCTA5 60633\", \"ZCTA5 60634\", \"ZCTA5 60636\", \"ZCTA5 60637\", \"ZCTA5 60638\",\r\n        \"ZCTA5 60639\", \"ZCTA5 60640\", \"ZCTA5 60641\", \"ZCTA5 60642\", \"ZCTA5 60643\", \"ZCTA5 60644\",\r\n        \"ZCTA5 60645\", \"ZCTA5 60646\", \"ZCTA5 60647\", \"ZCTA5 60649\", \"ZCTA5 60651\", \"ZCTA5 60652\",\r\n        \"ZCTA5 60653\", \"ZCTA5 60654\", \"ZCTA5 60655\", \"ZCTA5 60656\", \"ZCTA5 60657\", \"ZCTA5 60659\",\r\n        \"ZCTA5 60660\", \"ZCTA5 60661\"\r\n    ]\r\n    median_incomes = [\r\n        \"Median Income\", \"121,294\", \"167,617\", \"124,888\", \"76,667\", \"116,462\", \"133,333\", \"119,500\", \"66,821\", \"47,209\", \"106,277\",\r\n        \"126,812\", \"58,858\", \"92,238\", \"135,364\", \"56,518\", \"72,326\", \"51,203\", \"100,976\", \"42,802\", \"46,472\",\r\n        \"30,163\", \"119,134\", \"37,814\", \"31,768\", \"83,527\", \"56,145\", \"48,601\", \"53,318\", \"91,135\", \"112,974\",\r\n        \"53,966\", \"54,956\", \"82,771\", \"30,451\", \"37,247\", \"85,374\", \"54,969\", \"69,397\", \"79,884\", \"137,853\",\r\n        \"80,461\", \"34,177\", \"73,726\", \"112,283\", \"97,550\", \"39,862\", \"48,532\", \"76,300\", \"35,136\", \"138,279\",\r\n        \"115,324\", \"82,992\", \"105,428\", \"64,202\", \"63,596\", \"139,748\"\r\n    ]\r\n\r\n    # Create the dictionary mapping zip codes to median incomes\r\n    zip_to_income = dict(zip(zip_codes, median_incomes))\r\n\r\n    # Define the condition for columns to keep:\r\n    condition = ~df.columns.str.startswith('Unnamed')\r\n    condition = condition | (df.columns == df.columns[0])\r\n\r\n    # Apply the condition to select columns\r\n    df = df.loc[:, condition]\r\n\r\n    df = df.drop([0])\r\n    df = df.drop(df.index[10:])\r\n\r\n    # Convert the dictionary to a DataFrame and ensure it matches the column structure\r\n    income_df = pd.DataFrame([zip_to_income])\r\n\r\n    # Add the new row to the original dataframe\r\n    df = pd.concat([df, income_df], ignore_index=True)\r\n\r\n    # Transpose the DataFrame so that zip codes are in the leftmost column\r\n    df_transposed = df.transpose()\r\n\r\n    # Set the first row (which contains the zip codes) as the new header\r\n    df_transposed.columns = df_transposed.iloc[0]\r\n\r\n    # Drop the first row, which is now the header row\r\n    df_transposed = df_transposed.drop(df_transposed.index[0])\r\n\r\n    # Reset the index to make it a regular column\r\n    df_transposed = df_transposed.reset_index()\r\n\r\n    # Rename other columns (update with your desired names)\r\n    new_column_names = {\r\n        'index': 'Zip Code',\r\n        'White': 'White Households',\r\n        'Black or African American': 'Black or African American Households',\r\n        'American Indian and Alaska Native': 'American Indian and Alaska Native Households',\r\n        'Asian': 'Asian Households',\r\n        'Native Hawaiian and Other Pacific Islander': 'Pacific Islander Households',\r\n        'Some other race': 'Other Race Households',\r\n        'Two or more races': 'Mixed Race Households',\r\n        'Hispanic or Latino origin (of any race)': 'Hispanic or Latino origin Households',\r\n        'Median Income': 'Median Household income'\r\n    }\r\n    df_transposed = df_transposed.rename(columns=new_column_names)\r\n    df_transposed.drop([\"White alone, not Hispanic or Latino\", \"Households\"], inplace=True, axis=1)\r\n\r\n    # Remove the first 6 characters from every value in the \"Zip Code\" column\r\n    df_transposed['Zip Code'] = df_transposed['Zip Code'].str[6:]\r\n\r\n    # Export the transposed DataFrame to a new Excel file\r\n    df_transposed.to_csv('data/cleaned_file.csv', index=True)\r\n\r\n    print(\"The transposed file has been saved as 'cleaned_file.csv'\")\r\n\r\n# Function to handle CSV file processing\r\ndef process_csv():\r\n    # Specify the CSV file path\r\n    file_path_csv = \"data/demographics_by_zip.csv\"\r\n    df2 = pd.read_csv(file_path_csv)\r\n\r\n    # Filter the columns to keep only \"Label (Grouping)\" and those ending with \"!!Total!!Estimate\"\r\n    columns_keep = ['Label (Grouping)'] + [col for col in df2.columns if col.endswith('!!Total!!Estimate')]\r\n\r\n    # Select only the desired columns\r\n    df2 = df2[columns_keep]\r\n    df2 = df2.drop(df2.index[20:])\r\n    df2 = df2.drop([1])\r\n    df2.loc[1:, 'Label (Grouping)'] = df2.loc[1:, 'Label (Grouping)'].str[8:]\r\n\r\n    df2.columns = df2.columns.str.slice(start=6, stop=11)\r\n\r\n    # Rename the column that was the \"Label (Grouping)\" to \"Zip Code\"\r\n    df2 = df2.rename(columns={'(Grou': 'Zip Code'})\r\n\r\n    # Reset the index to ensure the headers are properly shifted to the first column when transposed\r\n    df2_reset = df2.reset_index()\r\n\r\n    # Transpose the DataFrame\r\n    df2_transposed = df2_reset.transpose()\r\n\r\n    # Set the first row as the header (it was originally the column names)\r\n    df2_transposed.columns = df2_transposed.iloc[1]\r\n\r\n    # Drop the first row as it's now redundant\r\n    df2_transposed = df2_transposed.drop(df2_transposed.index[0])\r\n    df2_transposed = df2_transposed.drop(df2_transposed.index[0])\r\n\r\n    df2_transposed = df2_transposed.reset_index()\r\n\r\n    # Create a dictionary to rename the age group columns to indicate they are population counts\r\n    age_group_rename = {\r\n        'index': 'Zip Code',\r\n        'Under 5 years': 'Population Under 5 years',\r\n        '5 to 9 years': 'Population 5 to 9 years',\r\n        '10 to 14 years': 'Population 10 to 14 years',\r\n        '15 to 19 years': 'Population 15 to 19 years',\r\n        '20 to 24 years': 'Population 20 to 24 years',\r\n        '25 to 29 years': 'Population 25 to 29 years',\r\n        '30 to 34 years': 'Population 30 to 34 years',\r\n        '35 to 39 years': 'Population 35 to 39 years',\r\n        '40 to 44 years': 'Population 40 to 44 years',\r\n        '45 to 49 years': 'Population 45 to 49 years',\r\n        '50 to 54 years': 'Population 50 to 54 years',\r\n        '55 to 59 years': 'Population 55 to 59 years',\r\n        '60 to 64 years': 'Population 60 to 64 years',\r\n        '65 to 69 years': 'Population 65 to 69 years',\r\n        '70 to 74 years': 'Population 70 to 74 years',\r\n        '75 to 79 years': 'Population 75 to 79 years',\r\n        '80 to 84 years': 'Population 80 to 84 years',\r\n        '85 years and over': 'Population 85 years and over'\r\n    }\r\n\r\n    # Now, use this dictionary to rename the columns in your DataFrame\r\n    df2_transposed = df2_transposed.rename(columns=age_group_rename)\r\n\r\n    # Specify the output CSV file path\r\n    output_csv_path = \"data/filtered_demographics_by_zip.csv\"\r\n\r\n    # Write the filtered DataFrame to a new CSV file\r\n    df2_transposed.to_csv(output_csv_path, index=True)\r\n\r\n    print(f\"Filtered data has been saved to {output_csv_path}\")\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/demographic_by_zip.py b/demographic_by_zip.py
+--- a/demographic_by_zip.py	(revision 8487dc674a042fa4e199332e0f00f27154458594)
++++ b/demographic_by_zip.py	(date 1734045297042)
+@@ -36,7 +36,7 @@
+     # Create the dictionary mapping zip codes to median incomes
+     zip_to_income = dict(zip(zip_codes, median_incomes))
+ 
+-    # Define the condition for columns to keep:
++    # Define the condition to create a boolean series to help filter out columns that need to be dropped:
+     condition = ~df.columns.str.startswith('Unnamed')
+     condition = condition | (df.columns == df.columns[0])
+ 
+@@ -50,7 +50,7 @@
+     income_df = pd.DataFrame([zip_to_income])
+ 
+     # Add the new row to the original dataframe
+-    df = pd.concat([df, income_df], ignore_index=True)
++    df = pd.concat([income_df, df], ignore_index=True)
+ 
+     # Transpose the DataFrame so that zip codes are in the leftmost column
+     df_transposed = df.transpose()
+@@ -66,7 +66,7 @@
+ 
+     # Rename other columns (update with your desired names)
+     new_column_names = {
+-        'index': 'Zip Code',
++        'index': 'zipcode',
+         'White': 'White Households',
+         'Black or African American': 'Black or African American Households',
+         'American Indian and Alaska Native': 'American Indian and Alaska Native Households',
+@@ -75,13 +75,16 @@
+         'Some other race': 'Other Race Households',
+         'Two or more races': 'Mixed Race Households',
+         'Hispanic or Latino origin (of any race)': 'Hispanic or Latino origin Households',
+-        'Median Income': 'Median Household income'
++        'Median Income': 'Median Household income (Dollars)'
+     }
+     df_transposed = df_transposed.rename(columns=new_column_names)
+     df_transposed.drop(["White alone, not Hispanic or Latino", "Households"], inplace=True, axis=1)
+ 
+     # Remove the first 6 characters from every value in the "Zip Code" column
+-    df_transposed['Zip Code'] = df_transposed['Zip Code'].str[6:]
++    df_transposed['zipcode'] = df_transposed['zipcode'].str[6:].astype(int)
++    df_transposed['zipcode'] = df_transposed['zipcode'].astype(int)
++
++    return df_transposed
+ 
+     # Export the transposed DataFrame to a new Excel file
+     df_transposed.to_csv('data/cleaned_file.csv', index=True)
+@@ -95,37 +98,40 @@
+     df2 = pd.read_csv(file_path_csv)
+ 
+     # Filter the columns to keep only "Label (Grouping)" and those ending with "!!Total!!Estimate"
+-    columns_keep = ['Label (Grouping)'] + [col for col in df2.columns if col.endswith('!!Total!!Estimate')]
++    columns_to_keep = []
++    for col in df2.columns:
++        if col.endswith('!!Total!!Estimate'):
++            columns_to_keep.append(col)
++
++    columns_to_keep = ['Label (Grouping)'] + columns_to_keep
+ 
+     # Select only the desired columns
+-    df2 = df2[columns_keep]
++    df2 = df2[columns_to_keep]
+     df2 = df2.drop(df2.index[20:])
+     df2 = df2.drop([1])
+     df2.loc[1:, 'Label (Grouping)'] = df2.loc[1:, 'Label (Grouping)'].str[8:]
+ 
+     df2.columns = df2.columns.str.slice(start=6, stop=11)
+ 
+-    # Rename the column that was the "Label (Grouping)" to "Zip Code"
+-    df2 = df2.rename(columns={'(Grou': 'Zip Code'})
++
+ 
+     # Reset the index to ensure the headers are properly shifted to the first column when transposed
+-    df2_reset = df2.reset_index()
++    df2 = df2.reset_index()
+ 
+     # Transpose the DataFrame
+-    df2_transposed = df2_reset.transpose()
++    df2_transposed = df2.transpose()
+ 
+     # Set the first row as the header (it was originally the column names)
+     df2_transposed.columns = df2_transposed.iloc[1]
+ 
+     # Drop the first row as it's now redundant
+-    df2_transposed = df2_transposed.drop(df2_transposed.index[0])
+-    df2_transposed = df2_transposed.drop(df2_transposed.index[0])
++    df2_transposed = df2_transposed.drop(df2_transposed.index[0:2])
+ 
+     df2_transposed = df2_transposed.reset_index()
+ 
+     # Create a dictionary to rename the age group columns to indicate they are population counts
+     age_group_rename = {
+-        'index': 'Zip Code',
++        'index': 'zipcode',
+         'Under 5 years': 'Population Under 5 years',
+         '5 to 9 years': 'Population 5 to 9 years',
+         '10 to 14 years': 'Population 10 to 14 years',
+@@ -149,9 +155,15 @@
+     # Now, use this dictionary to rename the columns in your DataFrame
+     df2_transposed = df2_transposed.rename(columns=age_group_rename)
+ 
++    df2_transposed['zipcode'] = df2_transposed['zipcode'].astype(int)
++
++
++
+     # Specify the output CSV file path
+     output_csv_path = "data/filtered_demographics_by_zip.csv"
+ 
++    return df2_transposed
++
+     # Write the filtered DataFrame to a new CSV file
+     df2_transposed.to_csv(output_csv_path, index=True)
+ 
+Index: api_housing_trends.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import requests\r\nimport csv\r\n\r\ndef process_api():\r\n    zip_codes = [\r\n        60601, 60602, 60603, 60604, 60605, 60606, 60607, 60608, 60609, 60610, 60611, 60612,\r\n        60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60621, 60622, 60623, 60624,\r\n        60625, 60626, 60628, 60629, 60630, 60631, 60632, 60633, 60634, 60636, 60637, 60638,\r\n        60639, 60640, 60641, 60642, 60643, 60644, 60645, 60646, 60647, 60649, 60651, 60652,\r\n        60653, 60654, 60655, 60656, 60657, 60659, 60660, 60661\r\n    ]\r\n\r\n    try:\r\n        table_data = []\r\n        headers = None  # We'll set the headers once we get the first response\r\n\r\n        for zip_code in zip_codes:\r\n            base_url = 'https://api.census.gov/data/2022/acs/acs5/profile?get=NAME,DP04_0001E,DP04_0003E,DP04_0004E,DP04_0005E&for=zip%20code%20tabulation%20area:{0}&key=ec274c4d126c681dd7359bde3ee46e4e5a684c02'.format(\r\n                zip_code)\r\n            response = requests.get(base_url)\r\n            data = response.json()\r\n\r\n            # Check if the data is not empty or if it has the correct format\r\n            if data:\r\n                if headers is None:\r\n                    # Set the headers from the first response\r\n                    headers = data[0]\r\n                # Append the data (excluding the header row)\r\n                table_data.append(data[1])\r\n\r\n        # Reorganize Column Names to be more clear and consistent\r\n        headers[0] = \"Census Zip Code Tag\"\r\n        headers[1] = \"Total Housing Units\"\r\n        headers[2] = \"Vacant Housing Units\"\r\n        headers[3] = \"Homeowner Vacancy Rate\"\r\n        headers[4] = \"Rental Vacancy Rate\"\r\n        headers[5] = \"Zip Code\"\r\n\r\n        # Write the data to a CSV file\r\n        with open(\"data/housing-trends.csv\", \"w\", newline=\"\", encoding=\"utf-8\") as csvFile:\r\n            csvWriter = csv.writer(csvFile)\r\n            csvWriter.writerow(headers)  # Write the headers first\r\n            csvWriter.writerows(table_data)  # Write the data rows\r\n            print(\"Data saved to data/housing-trends.csv successfully!\")\r\n\r\n    except requests.exceptions.RequestException as e:\r\n        print('An error occurred:', e)\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/api_housing_trends.py b/api_housing_trends.py
+--- a/api_housing_trends.py	(revision 8487dc674a042fa4e199332e0f00f27154458594)
++++ b/api_housing_trends.py	(date 1734045830028)
+@@ -1,5 +1,9 @@
+ import requests
+ import csv
++import pandas as pd
++
++from demographic_by_zip import process_excel
++
+ 
+ def process_api():
+     zip_codes = [
+@@ -34,7 +38,12 @@
+         headers[2] = "Vacant Housing Units"
+         headers[3] = "Homeowner Vacancy Rate"
+         headers[4] = "Rental Vacancy Rate"
+-        headers[5] = "Zip Code"
++        headers[5] = "zipcode"
++
++        df = pd.DataFrame(data=table_data, columns=headers)
++        df['zipcode'] = df['zipcode'].astype(int)
++        df = df.drop(columns='Census Zip Code Tag')
++        return df
+ 
+         # Write the data to a CSV file
+         with open("data/housing-trends.csv", "w", newline="", encoding="utf-8") as csvFile:
+Index: data/cleaned_file.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>,Zip Code,White Households,Black or African American Households,American Indian and Alaska Native Households,Asian Households,Pacific Islander Households,Other Race Households,Mixed Race Households,Hispanic or Latino origin Households,Median Household income\r\n0,60601,\"5,526\",585,0,\"2,195\",0,273,673,785,\"121,294\"\r\n1,60602,218,32,61,157,0,0,0,124,\"167,617\"\r\n2,60603,339,54,0,264,0,7,10,40,\"124,888\"\r\n3,60604,336,22,0,76,0,3,15,25,\"76,667\"\r\n4,60605,\"11,369\",\"2,753\",24,\"3,204\",0,431,\"1,036\",\"1,434\",\"116,462\"\r\n5,60606,\"1,547\",49,60,955,0,21,34,135,\"133,333\"\r\n6,60607,\"8,368\",\"1,342\",28,\"2,525\",42,471,698,\"1,250\",\"119,500\"\r\n7,60608,\"11,253\",\"3,190\",380,\"4,245\",0,\"6,305\",\"3,708\",\"13,019\",\"66,821\"\r\n8,60609,\"7,323\",\"6,123\",258,\"1,400\",15,\"5,616\",\"2,238\",\"11,220\",\"47,209\"\r\n9,60610,\"19,880\",\"2,444\",86,\"2,237\",8,224,743,\"1,087\",\"106,277\"\r\n10,60611,\"15,418\",971,28,\"5,558\",0,312,767,\"1,154\",\"126,812\"\r\n11,60612,\"4,433\",\"7,541\",78,603,13,730,857,\"1,948\",\"58,858\"\r\n12,60613,\"21,969\",\"1,727\",135,\"2,006\",7,848,\"1,745\",\"3,035\",\"92,238\"\r\n13,60614,\"28,755\",\"1,254\",15,\"1,833\",5,842,\"1,364\",\"2,070\",\"135,364\"\r\n14,60615,\"6,150\",\"13,250\",50,\"1,891\",0,151,998,\"1,057\",\"56,518\"\r\n15,60616,\"8,492\",\"7,286\",136,\"7,551\",24,421,834,\"1,615\",\"72,326\"\r\n16,60617,\"6,155\",\"17,847\",288,162,20,\"3,811\",\"2,023\",\"9,612\",\"51,203\"\r\n17,60618,\"24,784\",\"1,212\",176,\"2,601\",72,\"4,101\",\"4,114\",\"11,109\",\"100,976\"\r\n18,60619,292,\"26,626\",36,55,0,399,695,449,\"42,802\"\r\n19,60620,338,\"24,724\",55,215,0,377,441,444,\"46,472\"\r\n20,60621,207,\"10,421\",7,68,0,128,303,275,\"30,163\"\r\n21,60622,\"19,089\",\"1,358\",41,\"1,221\",21,967,\"2,391\",\"4,668\",\"119,134\"\r\n22,60623,\"6,932\",\"8,451\",362,197,0,\"6,752\",\"4,270\",\"16,990\",\"37,814\"\r\n23,60624,669,\"11,762\",0,49,0,648,230,909,\"31,768\"\r\n24,60625,\"19,814\",\"1,498\",234,\"3,788\",0,\"2,469\",\"3,431\",\"7,471\",\"83,527\"\r\n25,60626,\"13,517\",\"5,251\",181,\"1,271\",0,\"1,407\",\"1,833\",\"3,232\",\"56,145\"\r\n26,60628,979,\"21,491\",0,22,0,375,465,792,\"48,601\"\r\n27,60629,\"12,263\",\"7,701\",573,234,54,\"7,500\",\"5,500\",\"21,742\",\"53,318\"\r\n28,60630,\"14,944\",433,79,\"2,270\",29,\"1,874\",\"1,711\",\"4,919\",\"91,135\"\r\n29,60631,\"10,422\",95,0,321,0,437,702,\"1,378\",\"112,974\"\r\n30,60632,\"11,585\",354,408,\"1,735\",53,\"7,013\",\"5,514\",\"20,534\",\"53,966\"\r\n31,60633,\"2,451\",\"1,426\",15,68,0,700,291,\"1,583\",\"54,956\"\r\n32,60634,\"18,965\",666,282,\"1,367\",0,\"3,665\",\"2,543\",\"8,843\",\"82,771\"\r\n33,60636,394,\"9,572\",55,32,16,918,347,\"1,474\",\"30,451\"\r\n34,60637,\"3,306\",\"16,953\",88,962,0,503,460,613,\"37,247\"\r\n35,60638,\"13,906\",599,283,233,21,\"2,825\",\"2,775\",\"9,027\",\"85,374\"\r\n36,60639,\"8,955\",\"4,570\",276,680,5,\"8,162\",\"3,953\",\"17,899\",\"54,969\"\r\n37,60640,\"24,080\",\"5,674\",120,\"3,728\",0,985,\"2,542\",\"3,980\",\"69,397\"\r\n38,60641,\"14,952\",803,180,\"1,450\",0,\"4,400\",\"3,233\",\"10,302\",\"79,884\"\r\n39,60642,\"8,303\",841,0,705,0,372,823,\"1,414\",\"137,853\"\r\n40,60643,\"4,382\",\"12,821\",61,136,0,91,706,474,\"80,461\"\r\n41,60644,846,\"16,300\",66,114,0,576,655,\"1,342\",\"34,177\"\r\n42,60645,\"8,819\",\"2,564\",99,\"2,205\",0,\"1,797\",\"1,516\",\"3,054\",\"73,726\"\r\n43,60646,\"8,678\",31,13,\"1,331\",0,298,455,\"1,178\",\"112,283\"\r\n44,60647,\"25,413\",\"2,118\",212,\"1,750\",32,\"2,292\",\"5,807\",\"11,800\",\"97,550\"\r\n45,60649,718,\"22,449\",0,130,27,241,511,616,\"39,862\"\r\n46,60651,\"4,014\",\"11,777\",193,169,0,\"2,645\",\"1,956\",\"6,810\",\"48,532\"\r\n47,60652,\"3,649\",\"6,514\",201,135,0,\"1,948\",\"1,196\",\"4,755\",\"76,300\"\r\n48,60653,\"1,006\",\"15,096\",75,155,7,157,471,441,\"35,136\"\r\n49,60654,\"11,583\",547,0,\"1,369\",0,308,\"1,266\",\"1,267\",\"138,279\"\r\n50,60655,\"9,426\",560,16,119,0,300,251,669,\"115,324\"\r\n51,60656,\"9,561\",516,0,\"1,507\",0,365,575,\"1,481\",\"82,992\"\r\n52,60657,\"31,429\",\"1,840\",48,\"2,706\",41,669,\"1,961\",\"3,240\",\"105,428\"\r\n53,60659,\"6,988\",\"1,289\",148,\"3,148\",0,782,\"1,302\",\"2,731\",\"64,202\"\r\n54,60660,\"12,066\",\"2,995\",41,\"3,034\",62,714,\"2,090\",\"2,745\",\"63,596\"\r\n55,60661,\"4,447\",347,0,\"1,889\",0,193,358,618,\"139,748\"\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/cleaned_file.csv b/data/cleaned_file.csv
+--- a/data/cleaned_file.csv	(revision 8487dc674a042fa4e199332e0f00f27154458594)
++++ b/data/cleaned_file.csv	(date 1734045258089)
+@@ -1,57 +1,57 @@
+-,Zip Code,White Households,Black or African American Households,American Indian and Alaska Native Households,Asian Households,Pacific Islander Households,Other Race Households,Mixed Race Households,Hispanic or Latino origin Households,Median Household income
+-0,60601,"5,526",585,0,"2,195",0,273,673,785,"121,294"
+-1,60602,218,32,61,157,0,0,0,124,"167,617"
+-2,60603,339,54,0,264,0,7,10,40,"124,888"
+-3,60604,336,22,0,76,0,3,15,25,"76,667"
+-4,60605,"11,369","2,753",24,"3,204",0,431,"1,036","1,434","116,462"
+-5,60606,"1,547",49,60,955,0,21,34,135,"133,333"
+-6,60607,"8,368","1,342",28,"2,525",42,471,698,"1,250","119,500"
+-7,60608,"11,253","3,190",380,"4,245",0,"6,305","3,708","13,019","66,821"
+-8,60609,"7,323","6,123",258,"1,400",15,"5,616","2,238","11,220","47,209"
+-9,60610,"19,880","2,444",86,"2,237",8,224,743,"1,087","106,277"
+-10,60611,"15,418",971,28,"5,558",0,312,767,"1,154","126,812"
+-11,60612,"4,433","7,541",78,603,13,730,857,"1,948","58,858"
+-12,60613,"21,969","1,727",135,"2,006",7,848,"1,745","3,035","92,238"
+-13,60614,"28,755","1,254",15,"1,833",5,842,"1,364","2,070","135,364"
+-14,60615,"6,150","13,250",50,"1,891",0,151,998,"1,057","56,518"
+-15,60616,"8,492","7,286",136,"7,551",24,421,834,"1,615","72,326"
+-16,60617,"6,155","17,847",288,162,20,"3,811","2,023","9,612","51,203"
+-17,60618,"24,784","1,212",176,"2,601",72,"4,101","4,114","11,109","100,976"
+-18,60619,292,"26,626",36,55,0,399,695,449,"42,802"
+-19,60620,338,"24,724",55,215,0,377,441,444,"46,472"
+-20,60621,207,"10,421",7,68,0,128,303,275,"30,163"
+-21,60622,"19,089","1,358",41,"1,221",21,967,"2,391","4,668","119,134"
+-22,60623,"6,932","8,451",362,197,0,"6,752","4,270","16,990","37,814"
+-23,60624,669,"11,762",0,49,0,648,230,909,"31,768"
+-24,60625,"19,814","1,498",234,"3,788",0,"2,469","3,431","7,471","83,527"
+-25,60626,"13,517","5,251",181,"1,271",0,"1,407","1,833","3,232","56,145"
+-26,60628,979,"21,491",0,22,0,375,465,792,"48,601"
+-27,60629,"12,263","7,701",573,234,54,"7,500","5,500","21,742","53,318"
+-28,60630,"14,944",433,79,"2,270",29,"1,874","1,711","4,919","91,135"
+-29,60631,"10,422",95,0,321,0,437,702,"1,378","112,974"
+-30,60632,"11,585",354,408,"1,735",53,"7,013","5,514","20,534","53,966"
+-31,60633,"2,451","1,426",15,68,0,700,291,"1,583","54,956"
+-32,60634,"18,965",666,282,"1,367",0,"3,665","2,543","8,843","82,771"
+-33,60636,394,"9,572",55,32,16,918,347,"1,474","30,451"
+-34,60637,"3,306","16,953",88,962,0,503,460,613,"37,247"
+-35,60638,"13,906",599,283,233,21,"2,825","2,775","9,027","85,374"
+-36,60639,"8,955","4,570",276,680,5,"8,162","3,953","17,899","54,969"
+-37,60640,"24,080","5,674",120,"3,728",0,985,"2,542","3,980","69,397"
+-38,60641,"14,952",803,180,"1,450",0,"4,400","3,233","10,302","79,884"
+-39,60642,"8,303",841,0,705,0,372,823,"1,414","137,853"
+-40,60643,"4,382","12,821",61,136,0,91,706,474,"80,461"
+-41,60644,846,"16,300",66,114,0,576,655,"1,342","34,177"
+-42,60645,"8,819","2,564",99,"2,205",0,"1,797","1,516","3,054","73,726"
+-43,60646,"8,678",31,13,"1,331",0,298,455,"1,178","112,283"
+-44,60647,"25,413","2,118",212,"1,750",32,"2,292","5,807","11,800","97,550"
+-45,60649,718,"22,449",0,130,27,241,511,616,"39,862"
+-46,60651,"4,014","11,777",193,169,0,"2,645","1,956","6,810","48,532"
+-47,60652,"3,649","6,514",201,135,0,"1,948","1,196","4,755","76,300"
+-48,60653,"1,006","15,096",75,155,7,157,471,441,"35,136"
+-49,60654,"11,583",547,0,"1,369",0,308,"1,266","1,267","138,279"
+-50,60655,"9,426",560,16,119,0,300,251,669,"115,324"
+-51,60656,"9,561",516,0,"1,507",0,365,575,"1,481","82,992"
+-52,60657,"31,429","1,840",48,"2,706",41,669,"1,961","3,240","105,428"
+-53,60659,"6,988","1,289",148,"3,148",0,782,"1,302","2,731","64,202"
+-54,60660,"12,066","2,995",41,"3,034",62,714,"2,090","2,745","63,596"
+-55,60661,"4,447",347,0,"1,889",0,193,358,618,"139,748"
++,zipcode,Median Household income (Dollars),White Households,Black or African American Households,American Indian and Alaska Native Households,Asian Households,Pacific Islander Households,Other Race Households,Mixed Race Households,Hispanic or Latino origin Households
++0,60601,"121,294","5,526",585,0,"2,195",0,273,673,785
++1,60602,"167,617",218,32,61,157,0,0,0,124
++2,60603,"124,888",339,54,0,264,0,7,10,40
++3,60604,"76,667",336,22,0,76,0,3,15,25
++4,60605,"116,462","11,369","2,753",24,"3,204",0,431,"1,036","1,434"
++5,60606,"133,333","1,547",49,60,955,0,21,34,135
++6,60607,"119,500","8,368","1,342",28,"2,525",42,471,698,"1,250"
++7,60608,"66,821","11,253","3,190",380,"4,245",0,"6,305","3,708","13,019"
++8,60609,"47,209","7,323","6,123",258,"1,400",15,"5,616","2,238","11,220"
++9,60610,"106,277","19,880","2,444",86,"2,237",8,224,743,"1,087"
++10,60611,"126,812","15,418",971,28,"5,558",0,312,767,"1,154"
++11,60612,"58,858","4,433","7,541",78,603,13,730,857,"1,948"
++12,60613,"92,238","21,969","1,727",135,"2,006",7,848,"1,745","3,035"
++13,60614,"135,364","28,755","1,254",15,"1,833",5,842,"1,364","2,070"
++14,60615,"56,518","6,150","13,250",50,"1,891",0,151,998,"1,057"
++15,60616,"72,326","8,492","7,286",136,"7,551",24,421,834,"1,615"
++16,60617,"51,203","6,155","17,847",288,162,20,"3,811","2,023","9,612"
++17,60618,"100,976","24,784","1,212",176,"2,601",72,"4,101","4,114","11,109"
++18,60619,"42,802",292,"26,626",36,55,0,399,695,449
++19,60620,"46,472",338,"24,724",55,215,0,377,441,444
++20,60621,"30,163",207,"10,421",7,68,0,128,303,275
++21,60622,"119,134","19,089","1,358",41,"1,221",21,967,"2,391","4,668"
++22,60623,"37,814","6,932","8,451",362,197,0,"6,752","4,270","16,990"
++23,60624,"31,768",669,"11,762",0,49,0,648,230,909
++24,60625,"83,527","19,814","1,498",234,"3,788",0,"2,469","3,431","7,471"
++25,60626,"56,145","13,517","5,251",181,"1,271",0,"1,407","1,833","3,232"
++26,60628,"48,601",979,"21,491",0,22,0,375,465,792
++27,60629,"53,318","12,263","7,701",573,234,54,"7,500","5,500","21,742"
++28,60630,"91,135","14,944",433,79,"2,270",29,"1,874","1,711","4,919"
++29,60631,"112,974","10,422",95,0,321,0,437,702,"1,378"
++30,60632,"53,966","11,585",354,408,"1,735",53,"7,013","5,514","20,534"
++31,60633,"54,956","2,451","1,426",15,68,0,700,291,"1,583"
++32,60634,"82,771","18,965",666,282,"1,367",0,"3,665","2,543","8,843"
++33,60636,"30,451",394,"9,572",55,32,16,918,347,"1,474"
++34,60637,"37,247","3,306","16,953",88,962,0,503,460,613
++35,60638,"85,374","13,906",599,283,233,21,"2,825","2,775","9,027"
++36,60639,"54,969","8,955","4,570",276,680,5,"8,162","3,953","17,899"
++37,60640,"69,397","24,080","5,674",120,"3,728",0,985,"2,542","3,980"
++38,60641,"79,884","14,952",803,180,"1,450",0,"4,400","3,233","10,302"
++39,60642,"137,853","8,303",841,0,705,0,372,823,"1,414"
++40,60643,"80,461","4,382","12,821",61,136,0,91,706,474
++41,60644,"34,177",846,"16,300",66,114,0,576,655,"1,342"
++42,60645,"73,726","8,819","2,564",99,"2,205",0,"1,797","1,516","3,054"
++43,60646,"112,283","8,678",31,13,"1,331",0,298,455,"1,178"
++44,60647,"97,550","25,413","2,118",212,"1,750",32,"2,292","5,807","11,800"
++45,60649,"39,862",718,"22,449",0,130,27,241,511,616
++46,60651,"48,532","4,014","11,777",193,169,0,"2,645","1,956","6,810"
++47,60652,"76,300","3,649","6,514",201,135,0,"1,948","1,196","4,755"
++48,60653,"35,136","1,006","15,096",75,155,7,157,471,441
++49,60654,"138,279","11,583",547,0,"1,369",0,308,"1,266","1,267"
++50,60655,"115,324","9,426",560,16,119,0,300,251,669
++51,60656,"82,992","9,561",516,0,"1,507",0,365,575,"1,481"
++52,60657,"105,428","31,429","1,840",48,"2,706",41,669,"1,961","3,240"
++53,60659,"64,202","6,988","1,289",148,"3,148",0,782,"1,302","2,731"
++54,60660,"63,596","12,066","2,995",41,"3,034",62,714,"2,090","2,745"
++55,60661,"139,748","4,447",347,0,"1,889",0,193,358,618
+Index: government_policy_report.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import slate3k as sl\r\nimport csv\r\n\r\ndef pdf_processor():\r\n    pdfFilename = \"data/housing-policy-info.pdf\"\r\n    output_File = \"data/chicago-housing-policy-report.csv\"\r\n\r\n    with open(pdfFilename, \"rb\") as pdfFileObject:\r\n        # Getting raw data\r\n        doc = sl.PDF(pdfFileObject)\r\n\r\n        # Table we want is on page 14 (index 13)\r\n        table_page = doc[13]\r\n\r\n        page_lines = table_page.split(\"\\n\")\r\n\r\n        start_index = page_lines.index('2000')  # Find the index of the starting string\r\n        end_index = page_lines.index('Housing Market Trends')\r\n        filtered_data = page_lines[start_index:end_index]\r\n\r\n        for item in filtered_data:\r\n            if item == '':\r\n                filtered_data.remove(item)\r\n\r\n        filtered_data[3] = \"Percent Change from 2000 to 2010\"\r\n        filtered_data[4] = \"Percent Change from 2010 to Current\"\r\n        headers = filtered_data[:5]\r\n        headers.insert(0, \"Year\")\r\n\r\n        rows = []\r\n        row = []\r\n        for item in filtered_data[5:]:\r\n            if item[0].isalpha():\r\n                if row:\r\n                    rows.append(row)\r\n                row = [item]\r\n            else:\r\n                row.append(item)\r\n\r\n        if row:\r\n            rows.append(row)\r\n\r\n        print(headers)\r\n        print(rows)\r\n\r\n        # Transpose the data\r\n        transposed_data = list(zip(*([headers] + rows)))\r\n\r\n        with open(output_File, \"w\", newline=\"\") as csvFile:\r\n            writer = csv.writer(csvFile)\r\n            for line in transposed_data:\r\n                writer.writerow(line)\r\n            csvFile.close()\r\n            print(\"Data outputted successfully!\")\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/government_policy_report.py b/government_policy_report.py
+--- a/government_policy_report.py	(revision 8487dc674a042fa4e199332e0f00f27154458594)
++++ b/government_policy_report.py	(date 1734046275024)
+@@ -1,5 +1,6 @@
+ import slate3k as sl
+ import csv
++import pandas as pd
+ 
+ def pdf_processor():
+     pdfFilename = "data/housing-policy-info.pdf"
+@@ -40,11 +41,10 @@
+         if row:
+             rows.append(row)
+ 
+-        print(headers)
+-        print(rows)
+-
+         # Transpose the data
+         transposed_data = list(zip(*([headers] + rows)))
++        transposed_data = pd.DataFrame(data=transposed_data[1:], columns=transposed_data[0])
++        return transposed_data
+ 
+         with open(output_File, "w", newline="") as csvFile:
+             writer = csv.writer(csvFile)
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"\r\nGroup 1 Final Project: Steven Weil, Aaron Anderson\r\nChicago, Illinois\r\n12/12/2024\r\nDSC 200\r\n\r\n\r\n\"\"\"\r\n\r\n\r\nfrom api_housing_trends import process_api\r\nfrom demographic_by_zip import process_excel, process_csv\r\nfrom government_policy_report import pdf_processor\r\nimport pandas as pd\r\n\r\n\r\ndef main():\r\n\r\n    print(\"Data processing has begun...\\n\")\r\n\r\n    #Process all 5 types of data\r\n    process_excel()\r\n    process_csv()\r\n    process_api()\r\n\r\n    #Mege Data in single CSV\r\n\r\n    #Output final CSV\r\n\r\n\r\n    #Process Pdf\r\n    pdf_processor()\r\n\r\n    #Output Final PDF\r\n\r\n    print(\"\\nData processing complete. Output Files Final_CSV.csv and Final_PDF.csv have been created!\")\r\n    print(\"Have a great day!\")\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 8487dc674a042fa4e199332e0f00f27154458594)
++++ b/main.py	(date 1734046171795)
+@@ -13,23 +13,29 @@
+ from government_policy_report import pdf_processor
+ import pandas as pd
+ 
++from merge_data import merge_data
++
+ 
+ def main():
+ 
+     print("Data processing has begun...\n")
+ 
+     #Process all 5 types of data
+-    process_excel()
+-    process_csv()
+-    process_api()
++    df1 = process_excel()
++    df2 = process_csv()
++    df3 = process_api()
+ 
+     #Mege Data in single CSV
++    merged_data = merge_data(df1, df2, df3, df1, df1)
+ 
+     #Output final CSV
+-
++    final_csv_path = "data/final_csv.csv"
++    merged_data.to_csv(final_csv_path, index=False)
+ 
+     #Process Pdf
+-    pdf_processor()
++    final_pdf_path = "data/final_pdf.csv"
++    df_pdf = pdf_processor()
++    df_pdf.to_csv(final_pdf_path, index=False)
+ 
+     #Output Final PDF
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"432175e3-6643-4ebf-903d-55e51a6cf01f\" name=\"Changes\" comment=\"Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/api_housing_trends.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/api_housing_trends.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/data/chicago-housing-policy-report.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/data/chicago-housing-policy-report.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/data/cleaned_file.xlsx\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/data/housing-trends.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/data/housing-trends.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/demographic_by_zip.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/demographic_by_zip.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/government-policy-report.py\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/main.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;StevenWeil&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/arondayo/DSC200_Final_Project&quot;,\r\n    &quot;accountId&quot;: &quot;3a61ac81-f697-48aa-abc7-26aba6bbc1c7&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 2\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2ptjq1Hy9x1tMbJsUeXm7d5rRAt\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Python.api_housing_trends.executor\": \"Run\",\r\n    \"Python.demographic_by_zip.executor\": \"Run\",\r\n    \"Python.government-policy-report.executor\": \"Run\",\r\n    \"Python.government_policy_report.executor\": \"Run\",\r\n    \"Python.main.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PY-242.20224.347\" />\r\n        <option value=\"bundled-python-sdk-c2d6afa66fbe-39cff9de6eef-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.20224.347\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"432175e3-6643-4ebf-903d-55e51a6cf01f\" name=\"Changes\" comment=\"\" />\r\n      <created>1733592453033</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1733592453033</updated>\r\n      <workItem from=\"1733978763697\" duration=\"8815000\" />\r\n      <workItem from=\"1734028435326\" duration=\"7503000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733989155092</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733989155092</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/DSC200_Final_Project$api_housing_trends.coverage\" NAME=\"api_housing_trends Coverage Results\" MODIFIED=\"1734029185229\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/DSC200_Final_Project$main.coverage\" NAME=\"main Coverage Results\" MODIFIED=\"1734040232948\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/DSC200_Final_Project$demographic_by_zip.coverage\" NAME=\"demographic_by_zip Coverage Results\" MODIFIED=\"1734039754710\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/DSC200_Final_Project$government_policy_report.coverage\" NAME=\"government-policy-report Coverage Results\" MODIFIED=\"1734028722898\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 8487dc674a042fa4e199332e0f00f27154458594)
++++ b/.idea/workspace.xml	(date 1734046154443)
+@@ -4,14 +4,14 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="432175e3-6643-4ebf-903d-55e51a6cf01f" name="Changes" comment="Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.">
++    <list default="true" id="432175e3-6643-4ebf-903d-55e51a6cf01f" name="Changes" comment="Updates to all python files. Data is now cleaned and main is updated.">
++      <change afterPath="$PROJECT_DIR$/merge_data.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/api_housing_trends.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_housing_trends.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/data/chicago-housing-policy-report.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/chicago-housing-policy-report.csv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/data/cleaned_file.xlsx" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/data/housing-trends.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/housing-trends.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/data/cleaned_file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/cleaned_file.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/data/filtered_demographics_by_zip.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/filtered_demographics_by_zip.csv" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/demographic_by_zip.py" beforeDir="false" afterPath="$PROJECT_DIR$/demographic_by_zip.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/government-policy-report.py" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/government_policy_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/government_policy_report.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -57,6 +57,7 @@
+     "Python.government-policy-report.executor": "Run",
+     "Python.government_policy_report.executor": "Run",
+     "Python.main.executor": "Run",
++    "Python.merge_data.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "git-widget-placeholder": "master",
+     "node.js.detected.package.eslint": "true",
+@@ -84,7 +85,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1733592453033</updated>
+       <workItem from="1733978763697" duration="8815000" />
+-      <workItem from="1734028435326" duration="7503000" />
++      <workItem from="1734028435326" duration="12195000" />
+     </task>
+     <task id="LOCAL-00001" summary="Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.">
+       <option name="closed" value="true" />
+@@ -94,7 +95,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1733989155092</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="Updates to all python files. Data is now cleaned and main is updated.">
++      <option name="closed" value="true" />
++      <created>1734041392312</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1734041392312</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -102,12 +111,14 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed." />
+-    <option name="LAST_COMMIT_MESSAGE" value="Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed." />
++    <MESSAGE value="Updates to all python files. Data is now cleaned and main is updated." />
++    <option name="LAST_COMMIT_MESSAGE" value="Updates to all python files. Data is now cleaned and main is updated." />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/DSC200_Final_Project$api_housing_trends.coverage" NAME="api_housing_trends Coverage Results" MODIFIED="1734029185229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+-    <SUITE FILE_PATH="coverage/DSC200_Final_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1734040232948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+-    <SUITE FILE_PATH="coverage/DSC200_Final_Project$demographic_by_zip.coverage" NAME="demographic_by_zip Coverage Results" MODIFIED="1734039754710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/DSC200_Final_Project$api_housing_trends.coverage" NAME="api_housing_trends Coverage Results" MODIFIED="1734045495533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/DSC200_Final_Project$main.coverage" NAME="main Coverage Results" MODIFIED="1734046096578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/DSC200_Final_Project$demographic_by_zip.coverage" NAME="demographic_by_zip Coverage Results" MODIFIED="1734045256953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/DSC200_Final_Project$merge_data.coverage" NAME="merge_data Coverage Results" MODIFIED="1734044062296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+     <SUITE FILE_PATH="coverage/DSC200_Final_Project$government_policy_report.coverage" NAME="government-policy-report Coverage Results" MODIFIED="1734028722898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: merge_data.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/merge_data.py b/merge_data.py
+new file mode 100644
+--- /dev/null	(date 1734045394681)
++++ b/merge_data.py	(date 1734045394681)
+@@ -0,0 +1,9 @@
++import pandas as pd
++
++def merge_data(df1, df2, df3, df4, df5):
++    merged_data = pd.merge(df1, df2, how='inner', on="zipcode")
++    merged_data = pd.merge(merged_data, df3, how='inner', on="zipcode")
++
++    return merged_data
++
++

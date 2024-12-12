@@ -1,5 +1,9 @@
 import requests
 import csv
+import pandas as pd
+
+from demographic_by_zip import process_excel
+
 
 def process_api():
     zip_codes = [
@@ -34,7 +38,12 @@ def process_api():
         headers[2] = "Vacant Housing Units"
         headers[3] = "Homeowner Vacancy Rate"
         headers[4] = "Rental Vacancy Rate"
-        headers[5] = "Zip Code"
+        headers[5] = "zipcode"
+
+        df = pd.DataFrame(data=table_data, columns=headers)
+        df['zipcode'] = df['zipcode'].astype(int)
+        df = df.drop(columns='Census Zip Code Tag')
+        return df
 
         # Write the data to a CSV file
         with open("data/housing-trends.csv", "w", newline="", encoding="utf-8") as csvFile:
