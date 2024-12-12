@@ -1,0 +1,331 @@
+Index: government-policy-report.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/government-policy-report.py b/government-policy-report.py
+new file mode 100644
+--- /dev/null	(date 1733982537753)
++++ b/government-policy-report.py	(date 1733982537753)
+@@ -0,0 +1,57 @@
++import slate3k as sl
++import csv
++
++pdfFilename = "data/housing-policy-info.pdf"
++output_File = "data/chicago-housing-policy-report.csv"
++
++
++with open(pdfFilename, "rb") as pdfFileObject:
++    # Getting raw data
++    doc = sl.PDF(pdfFileObject)
++
++    #table we want is on page 14 (index 13)
++    table_page = doc[13]
++
++    page_lines = table_page.split("\n")
++
++    start_index = page_lines.index('2000')  # Find the index of the starting string
++    end_index = page_lines.index('Housing Market Trends')
++    filtered_data = page_lines[start_index:end_index]
++
++    for item in filtered_data:
++        if item == '':
++            filtered_data.remove(item)
++
++
++    filtered_data[3] = "Percent Change from 2000 to 2010"
++    filtered_data[4] = "Percent Change from 2010 to Current"
++    headers = filtered_data[:5]
++    headers.insert(0, "Measurement")
++
++    rows = []
++    row = []
++    for item in filtered_data[5:]:
++        if item[0].isalpha():
++            if row:
++                rows.append(row)
++            row = [item]
++        else:
++            row.append(item)
++
++    if row:
++        rows.append(row)
++
++    print(rows)
++
++    with open (output_File, "w", newline="") as csvFile:
++        writer = csv.writer(csvFile)
++        writer.writerow(headers)
++        for row in rows:
++            writer.writerow(row)
++        csvFile.close()
++        print("Data outputted successfully!")
++
++
++
++
++
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"432175e3-6643-4ebf-903d-55e51a6cf01f\" name=\"Changes\" comment=\"initial commit\">\r\n      <change afterPath=\"$PROJECT_DIR$/data/FinalProject - Fall 2024.pdf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/web_scraping.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"arondayo\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/arondayo/DSC200_Final_Project.git\",\r\n    \"accountId\": \"2326c085-60ff-4e4b-b73c-63ecf4d72418\"\r\n  }\r\n}]]></component>\r\n  <component name=\"ProjectColorInfo\"><![CDATA[{\r\n  \"associatedIndex\": 2\r\n}]]></component>\r\n  <component name=\"ProjectId\" id=\"2ptjq1Hy9x1tMbJsUeXm7d5rRAt\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Python.web_scraping.executor\": \"Debug\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"last_opened_file_path\": \"C:/Users/Aaron/Documents/Obsidian Vaults/College/test/DSC 200 Data Wrangling/Final Project/data\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Aaron\\Documents\\Obsidian Vaults\\College\\test\\DSC 200 Data Wrangling\\Final Project\\data\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Aaron\\Documents\\Obsidian Vaults\\College\\test\\DSC 200 Data Wrangling\\Final Project\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"432175e3-6643-4ebf-903d-55e51a6cf01f\" name=\"Changes\" comment=\"\" />\r\n      <created>1733592453033</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1733592453033</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"initial commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733592517506</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733592517506</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"initial commit\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"initial commit\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\r\n          <url>file://$PROJECT_DIR$/web_scraping.py</url>\r\n          <line>19</line>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1b09051aa50c26d95d82ec7f0e416e5df844cea6)
++++ b/.idea/workspace.xml	(date 1733988856414)
+@@ -4,9 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="432175e3-6643-4ebf-903d-55e51a6cf01f" name="Changes" comment="initial commit">
+-      <change afterPath="$PROJECT_DIR$/data/FinalProject - Fall 2024.pdf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/web_scraping.py" afterDir="false" />
++    <list default="true" id="432175e3-6643-4ebf-903d-55e51a6cf01f" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/api_housing_trends.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/demographic_by_zip.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/government-policy-report.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -27,18 +28,18 @@
+   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+   "lastFilter": {
+     "state": "OPEN",
+-    "assignee": "arondayo"
++    "assignee": "StevenWeil"
+   }
+ }]]></component>
+   <component name="GithubPullRequestsUISettings"><![CDATA[{
+   "selectedUrlAndAccountId": {
+-    "url": "https://github.com/arondayo/DSC200_Final_Project.git",
+-    "accountId": "2326c085-60ff-4e4b-b73c-63ecf4d72418"
++    "url": "https://github.com/arondayo/DSC200_Final_Project",
++    "accountId": "3a61ac81-f697-48aa-abc7-26aba6bbc1c7"
+   }
+ }]]></component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "associatedIndex": 2
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 2
++}</component>
+   <component name="ProjectId" id="2ptjq1Hy9x1tMbJsUeXm7d5rRAt" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+@@ -47,24 +48,25 @@
+   </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+-    "Python.web_scraping.executor": "Debug",
++    "Python.api_housing_trends.executor": "Run",
++    "Python.demographic_by_zip.executor": "Run",
++    "Python.government-policy-report.executor": "Run",
++    "Python.government_policy_report.executor": "Run",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "git-widget-placeholder": "master",
+-    "last_opened_file_path": "C:/Users/Aaron/Documents/Obsidian Vaults/College/test/DSC 200 Data Wrangling/Final Project/data"
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
+-  <component name="RecentsManager">
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="C:\Users\Aaron\Documents\Obsidian Vaults\College\test\DSC 200 Data Wrangling\Final Project\data" />
+-    </key>
+-    <key name="MoveFile.RECENT_KEYS">
+-      <recent name="C:\Users\Aaron\Documents\Obsidian Vaults\College\test\DSC 200 Data Wrangling\Final Project" />
+-    </key>
+-  </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
++        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PY-242.20224.347" />
++        <option value="bundled-python-sdk-c2d6afa66fbe-39cff9de6eef-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.20224.347" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -76,31 +78,16 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1733592453033</updated>
++      <workItem from="1733978763697" duration="7931000" />
+     </task>
+-    <task id="LOCAL-00001" summary="initial commit">
+-      <option name="closed" value="true" />
+-      <created>1733592517506</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1733592517506</updated>
+-    </task>
+-    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="initial commit" />
+-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
+   </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+-          <url>file://$PROJECT_DIR$/web_scraping.py</url>
+-          <line>19</line>
+-          <option name="timeStamp" value="2" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/DSC200_Final_Project$api_housing_trends.coverage" NAME="api_housing_trends Coverage Results" MODIFIED="1733988828819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/DSC200_Final_Project$demographic_by_zip.coverage" NAME="demographic_by_zip Coverage Results" MODIFIED="1733978856260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
++    <SUITE FILE_PATH="coverage/DSC200_Final_Project$government_policy_report.coverage" NAME="government-policy-report Coverage Results" MODIFIED="1733982537764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: demographic_by_zip.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/demographic_by_zip.py b/demographic_by_zip.py
+new file mode 100644
+--- /dev/null	(date 1733870194469)
++++ b/demographic_by_zip.py	(date 1733870194469)
+@@ -0,0 +1,80 @@
++import openpyxl
++import csv
++import pandas as pd
++
++# Specify the Excel file path
++file_path = 'data/income_by_zip.xlsx'
++
++# Load the Excel file with the first row as the header
++df = pd.read_excel(file_path)
++
++# Drop rows two and three (index 1 and 2)
++df = df.drop([1, 2, 4])
++
++# List of zip codes
++zip_codes = [
++    "Unnamed: 0", "ZCTA5 60601", "ZCTA5 60602", "ZCTA5 60603", "ZCTA5 60604", "ZCTA5 60605", "ZCTA5 60606",
++    "ZCTA5 60607", "ZCTA5 60608", "ZCTA5 60609", "ZCTA5 60610", "ZCTA5 60611", "ZCTA5 60612",
++    "ZCTA5 60613", "ZCTA5 60614", "ZCTA5 60615", "ZCTA5 60616", "ZCTA5 60617", "ZCTA5 60618",
++    "ZCTA5 60619", "ZCTA5 60620", "ZCTA5 60621", "ZCTA5 60622", "ZCTA5 60623", "ZCTA5 60624",
++    "ZCTA5 60625", "ZCTA5 60626", "ZCTA5 60628", "ZCTA5 60629", "ZCTA5 60630", "ZCTA5 60631",
++    "ZCTA5 60632", "ZCTA5 60633", "ZCTA5 60634", "ZCTA5 60636", "ZCTA5 60637", "ZCTA5 60638",
++    "ZCTA5 60639", "ZCTA5 60640", "ZCTA5 60641", "ZCTA5 60642", "ZCTA5 60643", "ZCTA5 60644",
++    "ZCTA5 60645", "ZCTA5 60646", "ZCTA5 60647", "ZCTA5 60649", "ZCTA5 60651", "ZCTA5 60652",
++    "ZCTA5 60653", "ZCTA5 60654", "ZCTA5 60655", "ZCTA5 60656", "ZCTA5 60657", "ZCTA5 60659",
++    "ZCTA5 60660", "ZCTA5 60661"
++]
++
++# List of median incomes corresponding to the zip codes
++median_incomes = [
++    "Median Income", "121,294", "167,617", "124,888", "76,667", "116,462", "133,333", "119,500", "66,821", "47,209", "106,277",
++    "126,812", "58,858", "92,238", "135,364", "56,518", "72,326", "51,203", "100,976", "42,802", "46,472",
++    "30,163", "119,134", "37,814", "31,768", "83,527", "56,145", "48,601", "53,318", "91,135", "112,974",
++    "53,966", "54,956", "82,771", "30,451", "37,247", "85,374", "54,969", "69,397", "79,884", "137,853",
++    "80,461", "34,177", "73,726", "112,283", "97,550", "39,862", "48,532", "76,300", "35,136", "138,279",
++    "115,324", "82,992", "105,428", "64,202", "63,596", "139,748"
++]
++
++# Create the dictionary mapping zip codes to median incomes
++zip_to_income = dict(zip(zip_codes, median_incomes))
++
++# Define the condition for columns to keep:
++# 1. Keep columns where the header does not start with 'Unnamed'
++condition = ~df.columns.str.startswith('Unnamed')
++# Ensure the first column is always kept
++condition = condition | (df.columns == df.columns[0])
++
++# Apply the condition to select columns
++df = df.loc[:, condition]
++
++df = df.drop([0])
++df = df.drop(df.index[10:])
++
++# Convert the dictionary to a DataFrame and ensure it matches the column structure
++income_df = pd.DataFrame([zip_to_income])
++
++# Add the new row to the original dataframe
++df = pd.concat([df, income_df], ignore_index=True)
++
++# Transpose the DataFrame so that zip codes are in the leftmost column
++df_transposed = df.transpose()
++
++# Set the first row (which contains the zip codes) as the new header
++df_transposed.columns = df_transposed.iloc[0]
++
++# Drop the first row, which is now the header row
++df_transposed = df_transposed.drop(df_transposed.index[0])
++
++
++
++# Reset the index to make it a regular column
++df_transposed = df_transposed.reset_index()
++
++# Rename the column to give it a proper header
++df_transposed = df_transposed.rename(columns={'index': 'Zip Codes'})
++
++
++# Export the transposed DataFrame to a new Excel file
++df_transposed.to_excel('data/cleaned_file.xlsx', index=True)
++
++print("The transposed file has been saved as 'cleaned_file.xlsx'")
+Index: api_housing_trends.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/api_housing_trends.py b/api_housing_trends.py
+new file mode 100644
+--- /dev/null	(date 1733988920612)
++++ b/api_housing_trends.py	(date 1733988920612)
+@@ -0,0 +1,38 @@
++import requests
++import csv
++
++zip_codes = [
++    60601, 60602, 60603, 60604, 60605, 60606, 60607, 60608, 60609, 60610, 60611, 60612,
++    60613, 60614, 60615, 60616, 60617, 60618, 60619, 60620, 60621, 60622, 60623, 60624,
++    60625, 60626, 60628, 60629, 60630, 60631, 60632, 60633, 60634, 60636, 60637, 60638,
++    60639, 60640, 60641, 60642, 60643, 60644, 60645, 60646, 60647, 60649, 60651, 60652,
++    60653, 60654, 60655, 60656, 60657, 60659, 60660, 60661
++]
++
++try:
++    table_data = []
++    headers = None  # We'll set the headers once we get the first response
++
++    for zip_code in zip_codes:
++        base_url = 'https://api.census.gov/data/2022/acs/acs5/profile?get=NAME,DP04_0001E,DP04_0003E,DP04_0004E,DP04_0005E&for=zip%20code%20tabulation%20area:{0}&key=ec274c4d126c681dd7359bde3ee46e4e5a684c02'.format(
++            zip_code)
++        response = requests.get(base_url)
++        data = response.json()
++
++        # Check if the data is not empty or if it has the correct format
++        if data:
++            if headers is None:
++                # Set the headers from the first response
++                headers = data[0]
++            # Append the data (excluding the header row)
++            table_data.append(data[1])
++
++    # Write the data to a CSV file
++    with open("data/housing-trends.csv", "w", newline="", encoding="utf-8") as csvFile:
++        csvWriter = csv.writer(csvFile)
++        csvWriter.writerow(headers)  # Write the headers first
++        csvWriter.writerows(table_data)  # Write the data rows
++        print("Data saved to data/housing-trends.csv successfully!")
++
++except requests.exceptions.RequestException as e:
++    print('An error occurred:', e)
