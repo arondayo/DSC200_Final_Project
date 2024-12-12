@@ -1,0 +1,11 @@
+Made ample use of RegEx for scraping and formatting of retrieved data from scrapes
+
+Issues/Struggles:
+
+	When scraping Apartments.com 
+		requests was unresponsive for this website, therefore I was required to use selenium for this scrape
+		price listings were often given as a price range, to handle this I averaged the lower and upper bounds later before 
+
+	When merging
+		had to learn to utilize pivot tables for getting average prices per zipcode
+	
