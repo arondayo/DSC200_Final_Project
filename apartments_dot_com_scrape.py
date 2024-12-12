@@ -3,18 +3,23 @@ from bs4 import BeautifulSoup as bSoup
 from selenium import webdriver
 import pandas as pd
 
-def apartments_scrape(url: str, pages: int = None) -> pd.DataFrame:
-    # receives url and number of pages as arguments (if left empty will scrape all available pages)
+def apartments_scrape(url: str) -> pd.DataFrame:
+    # receives url, extracts number of pages for that city
     #   url examples
     #       https://www.apartments.com/new-york-ny/
     #       https://www.apartments.com/chicago-il/
 
-    if pages is None: # determining number of pages
-        driver = webdriver.Chrome()
-        driver.get(url)
-        pages = int(bSoup(driver.page_source, 'html.parser').find('span', class_='pageRange').text.split(' ')[-1])
-        print(f'{pages} pages found for {url.split('/')[3]}')
+    if not re.match(r'https://www\.apartments\.com/[a-z\-]+/', url):
+        raise Exception('Invalid url')
 
+    # determining number of pages
+    print(f'Determining number of pages for {url.split('/')[3]}')
+    driver = webdriver.Chrome()
+    driver.get(url)
+    pages = int(bSoup(driver.page_source, 'html.parser').find('span', class_='pageRange').text.split(' ')[-1])
+    time.sleep(.5)
+    print(f'{pages} pages found')
+    print(f'\nExtracting Apartments.com listings for {url.split('/')[3]}')
 
     headers = ['name', 'address', 'zipcode', 'price_low', 'price_high', 'layout', 'amenities', 'link', 'phone_number']
     rows = []
@@ -24,7 +29,7 @@ def apartments_scrape(url: str, pages: int = None) -> pd.DataFrame:
         driver = webdriver.Chrome()
         driver.get(url_)
         time.sleep(1)
-        print(f'Extracting Apartments.com listings for {url.split('/')[3]} page {page_number}')
+        print(f'extracting page {page_number}')
 
         soup = bSoup(driver.page_source, 'html.parser')
         driver.close()

@@ -1,9 +1,6 @@
 import time, re
-from http.client import responses
-
 from bs4 import BeautifulSoup as bSoup
 import requests as rq
-# from selenium import webdriver
 import pandas as pd
 
 def chicago_properties_scrape() -> pd.DataFrame:
