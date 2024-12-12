@@ -33,8 +33,10 @@ end goal: aggregate average prices (rental apartments, purchasing home) per zip 
 
 Pages (1-18) (I've implemented a way to find the # of pages automatically)
 Pull:
-	`[name, address, zipcode, price, layout, amenities, link, phone_number]`
-	https://www.apartments.com/chicago-il/{page_number}/
+	
+ `[name, address, zipcode, price, layout, amenities, link, phone_number]`
+
+https://www.apartments.com/chicago-il/{page_number}/
 
 
 ## bestchicagoproperties.com
@@ -42,5 +44,7 @@ Pull:
 Pull all the available data from the first page from each of the zip codes above (an account is required to see more than the first page) 
 
 Pull:
-	`['address', 'zipcode', 'price', 'housing_type', 'status', 'layout', 'link']`
-	https://bestchicagoproperties.com/property-search/chicago-real-estate-for-sale-by-zip-code/{zip_code}-chicago-homes-for-sale/
+
+ `['address', 'zipcode', 'price', 'housing_type', 'status', 'layout', 'link']`
+
+ https://bestchicagoproperties.com/property-search/chicago-real-estate-for-sale-by-zip-code/{zip_code}-chicago-homes-for-sale/
