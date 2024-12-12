@@ -1,5 +1,6 @@
 import slate3k as sl
 import csv
+import pandas as pd
 
 def pdf_processor():
     pdfFilename = "data/housing-policy-info.pdf"
@@ -40,11 +41,10 @@ def pdf_processor():
         if row:
             rows.append(row)
 
-        print(headers)
-        print(rows)
-
         # Transpose the data
         transposed_data = list(zip(*([headers] + rows)))
+        transposed_data = pd.DataFrame(data=transposed_data[1:], columns=transposed_data[0])
+        return transposed_data
 
         with open(output_File, "w", newline="") as csvFile:
             writer = csv.writer(csvFile)

@@ -36,7 +36,7 @@ def process_excel():
     # Create the dictionary mapping zip codes to median incomes
     zip_to_income = dict(zip(zip_codes, median_incomes))
 
-    # Define the condition for columns to keep:
+    # Define the condition to create a boolean series to help filter out columns that need to be dropped:
     condition = ~df.columns.str.startswith('Unnamed')
     condition = condition | (df.columns == df.columns[0])
 
@@ -50,7 +50,7 @@ def process_excel():
     income_df = pd.DataFrame([zip_to_income])
 
     # Add the new row to the original dataframe
-    df = pd.concat([df, income_df], ignore_index=True)
+    df = pd.concat([income_df, df], ignore_index=True)
 
     # Transpose the DataFrame so that zip codes are in the leftmost column
     df_transposed = df.transpose()
@@ -66,7 +66,7 @@ def process_excel():
 
     # Rename other columns (update with your desired names)
     new_column_names = {
-        'index': 'Zip Code',
+        'index': 'zipcode',
         'White': 'White Households',
         'Black or African American': 'Black or African American Households',
         'American Indian and Alaska Native': 'American Indian and Alaska Native Households',
@@ -75,13 +75,16 @@ def process_excel():
         'Some other race': 'Other Race Households',
         'Two or more races': 'Mixed Race Households',
         'Hispanic or Latino origin (of any race)': 'Hispanic or Latino origin Households',
-        'Median Income': 'Median Household income'
+        'Median Income': 'Median Household income (Dollars)'
     }
     df_transposed = df_transposed.rename(columns=new_column_names)
     df_transposed.drop(["White alone, not Hispanic or Latino", "Households"], inplace=True, axis=1)
 
     # Remove the first 6 characters from every value in the "Zip Code" column
-    df_transposed['Zip Code'] = df_transposed['Zip Code'].str[6:]
+    df_transposed['zipcode'] = df_transposed['zipcode'].str[6:].astype(int)
+    df_transposed['zipcode'] = df_transposed['zipcode'].astype(int)
+
+    return df_transposed
 
     # Export the transposed DataFrame to a new Excel file
     df_transposed.to_csv('data/cleaned_file.csv', index=True)
@@ -95,37 +98,40 @@ def process_csv():
     df2 = pd.read_csv(file_path_csv)
 
     # Filter the columns to keep only "Label (Grouping)" and those ending with "!!Total!!Estimate"
-    columns_keep = ['Label (Grouping)'] + [col for col in df2.columns if col.endswith('!!Total!!Estimate')]
+    columns_to_keep = []
+    for col in df2.columns:
+        if col.endswith('!!Total!!Estimate'):
+            columns_to_keep.append(col)
+
+    columns_to_keep = ['Label (Grouping)'] + columns_to_keep
 
     # Select only the desired columns
-    df2 = df2[columns_keep]
+    df2 = df2[columns_to_keep]
     df2 = df2.drop(df2.index[20:])
     df2 = df2.drop([1])
     df2.loc[1:, 'Label (Grouping)'] = df2.loc[1:, 'Label (Grouping)'].str[8:]
 
     df2.columns = df2.columns.str.slice(start=6, stop=11)
 
-    # Rename the column that was the "Label (Grouping)" to "Zip Code"
-    df2 = df2.rename(columns={'(Grou': 'Zip Code'})
+
 
     # Reset the index to ensure the headers are properly shifted to the first column when transposed
-    df2_reset = df2.reset_index()
+    df2 = df2.reset_index()
 
     # Transpose the DataFrame
-    df2_transposed = df2_reset.transpose()
+    df2_transposed = df2.transpose()
 
     # Set the first row as the header (it was originally the column names)
     df2_transposed.columns = df2_transposed.iloc[1]
 
     # Drop the first row as it's now redundant
-    df2_transposed = df2_transposed.drop(df2_transposed.index[0])
-    df2_transposed = df2_transposed.drop(df2_transposed.index[0])
+    df2_transposed = df2_transposed.drop(df2_transposed.index[0:2])
 
     df2_transposed = df2_transposed.reset_index()
 
     # Create a dictionary to rename the age group columns to indicate they are population counts
     age_group_rename = {
-        'index': 'Zip Code',
+        'index': 'zipcode',
         'Under 5 years': 'Population Under 5 years',
         '5 to 9 years': 'Population 5 to 9 years',
         '10 to 14 years': 'Population 10 to 14 years',
@@ -149,8 +155,14 @@ def process_csv():
     # Now, use this dictionary to rename the columns in your DataFrame
     df2_transposed = df2_transposed.rename(columns=age_group_rename)
 
+    df2_transposed['zipcode'] = df2_transposed['zipcode'].astype(int)
+
+
+
     # Specify the output CSV file path
     output_csv_path = "data/filtered_demographics_by_zip.csv"
+
+    return df2_transposed
 
     # Write the filtered DataFrame to a new CSV file
     df2_transposed.to_csv(output_csv_path, index=True)
