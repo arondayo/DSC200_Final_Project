@@ -60,8 +60,8 @@ def scrape_clean() -> pd.DataFrame:
 
     # formatting output df data
     # (pulled from stackexchange) formats the final number to have at most 2 decimal places
-    output_df['owned_property_avg_price'] = output_df['owned_property_avg_price'].apply(lambda x: float("{:.2f}".format(x)))
     output_df['rental_property_avg_price'] = output_df['rental_property_avg_price'].apply(lambda x: float("{:.2f}".format(x)))
+    output_df['owned_property_avg_price'] = output_df['owned_property_avg_price'].apply(lambda x: float("{:.2f}".format(x)))
     return output_df
 
 if __name__ == '__main__':
