@@ -3,6 +3,14 @@ from bs4 import BeautifulSoup as bSoup
 import requests as rq
 import pandas as pd
 
+"""
+This function extracts the listing data from bestchicagoproperties.com over a list of zipcodes
+It utilizes requests and html is parsed with BeautifulSoup
+Each value of interest is extracted and the resulting list is then converted to a pandas dataframe, written to a csv file 
+        (for use later to save on time if program is rerun it won't need to re-scrape)
+    finally the dataframe is returned by the function
+"""
+
 def chicago_properties_scrape() -> pd.DataFrame:
     chicago_zip_codes = [
         60290, 60601, 60602, 60603, 60604, 60605, 60606, 60607, 60608, 60610, 60611, 60614, 60615, 60618, 60619,
@@ -59,4 +67,6 @@ def chicago_properties_scrape() -> pd.DataFrame:
     return df
 
 if __name__ == '__main__':
-    chicago_properties_scrape()
+    df = chicago_properties_scrape()
+    print(df.info())
+    print(df)

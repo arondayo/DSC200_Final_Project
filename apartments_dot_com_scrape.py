@@ -3,6 +3,15 @@ from bs4 import BeautifulSoup as bSoup
 from selenium import webdriver
 import pandas as pd
 
+"""
+This function extracts the listing data for a particular city from apartments.com
+It utilizes selenium as requests can't be used in this case
+The html is parsed with BeautifulSoup and each value of interest is extracted
+The resulting list is then converted to a pandas dataframe, written to a csv file 
+        (for use later to save on time if program is rerun it won't need to re-scrape)
+    finally the dataframe is returned by the function
+"""
+
 def apartments_scrape(url: str) -> pd.DataFrame:
     # receives url, extracts number of pages for that city
     #   url examples
@@ -139,4 +148,6 @@ def apartments_scrape(url: str) -> pd.DataFrame:
     return df
 
 if __name__ == '__main__':
-    apartments_scrape('https://www.apartments.com/chicago-il/')
+    df = apartments_scrape('https://www.apartments.com/chicago-il/')
+    print(df.info())
+    print(df)
