@@ -27,14 +27,14 @@ Students will work in pairs to acquire, clean, and integrate datasets related to
 # Web Scraping
 
 end goal: aggregate average prices (rental apartments, purchasing home) per zip code for merging
-	`(zipcode, avg_apartment_price)`
+	`(zipcode, rental_property_avg_price, owned_property_avg_price)`
 
 ## apartments.com
 
 Pages (1-18) (I've implemented a way to find the # of pages automatically)
 Pull:
 	
- `[name, address, zipcode, price, layout, amenities, link, phone_number]`
+ `[name, address, zipcode, price_low, price_high, layout, amenities, link, phone_number]`
 
 https://www.apartments.com/chicago-il/{page_number}/
 
