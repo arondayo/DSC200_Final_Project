@@ -28,7 +28,7 @@ def main():
     df4 = scrape_clean()[['zipcode','owned_property_avg_price','rental_property_avg_price']]
 
 
-    #Mege Data in single CSV
+    #Merge Data in single CSV
     merged_data = merge_data(df1, df2, df3, df4)
 
 
