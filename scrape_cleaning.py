@@ -1,24 +1,28 @@
-import numpy as np
-
-from apartments_dot_com_scrape import  apartments_scrape
+from apartments_dot_com_scrape import apartments_scrape
 from bestchicagoproperties_dot_com_scrape import chicago_properties_scrape
-
 import pandas as pd
+
+"""
+This function uses the output from apartments_scrape and chicago_properties_scrape
+It manipulates the data as pandas dataframes,
+Calculates the average price of rental/owned properties per zip code with pandas pivot tables, converts those into dfs
+It takes those averages per zipcode from both dataframes and outer merges them and returns that dataframe
+"""
 
 def scrape_clean() -> pd.DataFrame:
     # checking to see scrape output csv files exist to save the time instead of scraping every time if they already exist
     try: # access / create apartments.com scrape csv
-        print("Existing Apartments.com scrape file found...")
         apartments_df = pd.read_csv('data/apartments.com_chicago-il_scrape.csv')
+        print("\nExisting Apartments.com scrape file found...")
     except FileNotFoundError:
-        print("No existing scrape file found... Starting scrape of <https://www.apartments.com/chicago-il/>")
+        print("\nNo existing Apartments.com scrape file found... Starting scrape of <https://www.apartments.com/chicago-il/>")
         apartments_df = apartments_scrape('https://www.apartments.com/chicago-il/')
 
     try: # access / create bestchicagoproperties.com scrape
-        print("Existing bestchicagoproperties.com scrape file found...")
         properties_df = pd.read_csv('data/bestchicagoproperties.com_scrape.csv')
+        print("\nExisting bestchicagoproperties.com scrape file found...")
     except FileNotFoundError:
-        print("No existing scrape file found... Starting scrape of <bestchicagoproperties.com>")
+        print("\nNo existing bestchicagoproperties.com scrape file found... Starting scrape of <bestchicagoproperties.com>")
         properties_df = chicago_properties_scrape()
 
 
@@ -43,6 +47,10 @@ def scrape_clean() -> pd.DataFrame:
                                       .str.replace(r'[ ]', '', regex=True)
                                       ).astype(int)
 
+    # convert zipcode values into ints
+    apartments_df['zipcode'] = apartments_df['zipcode'].astype(int)
+    properties_df['zipcode'] = properties_df['zipcode'].astype(int)
+
     # computing average price for the price ranges given from apartments.com
     apartments_df['price_avg'] = apartments_df[['price_low', 'price_high']].mean(axis=1)
 
@@ -66,4 +74,6 @@ def scrape_clean() -> pd.DataFrame:
 
 if __name__ == '__main__':
     df = scrape_clean()
-    # df.to_csv('data/clean_scrape_data.csv', index=False)
+    print(df.info())
+    print(df)
+    df.to_csv('data/clean_scrape_data.csv', index=False)
