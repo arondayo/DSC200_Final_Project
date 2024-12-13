@@ -1,17 +1,31 @@
+#Import pandas to clean and organize the data
 import pandas as pd
 
-# Function to handle Excel file processing
+
+"""
+This function handles the excel file processing. The chosen file provides demographic information about the Zip codes of Chicago.
+It creates a dataframe for the excel file data and cleans it for later merging.  
+The excel file was pulled from the census.gov database and provides information about Chicago Households. 
+We have chosen to focus on the median income per household and data about the ethnicity of households. We used pandas
+to read in the excel file. The format of the file was a bit strange and we needed to do alot of dropping, transposing, and
+other data manipulation to get the end product. Specifically, for the Median income we manually created a dictionary and mapped it to its corresponding
+zip code. The reasoning behind this was the way the original file was formatted, it was almost impossible to get the data to line up 
+correctly otherwise. Once, that was in place, Median income and all the other columns were cleaned with pandas normally. 
+
+"""
+
+#Function to handle the Excel File Processing
 def process_excel():
-    # Specify the Excel file path
+    #Create the file path variable
     file_path = 'data/income_by_zip.xlsx'
 
-    # Load the Excel file with the first row as the header
+    #Load the excel file into a dataframe
     df = pd.read_excel(file_path)
 
-    # Drop rows two and three (index 1 and 2)
+    #Drop rows at index, 1, 2, 4 => these were formatting rows that contained no info
     df = df.drop([1, 2, 4])
 
-    # List of zip codes and corresponding median incomes.
+    #List of zip codes and corresponding median incomes.
     zip_codes = [
         "Unnamed: 0", "ZCTA5 60601", "ZCTA5 60602", "ZCTA5 60603", "ZCTA5 60604", "ZCTA5 60605", "ZCTA5 60606",
         "ZCTA5 60607", "ZCTA5 60608", "ZCTA5 60609", "ZCTA5 60610", "ZCTA5 60611", "ZCTA5 60612",
@@ -33,38 +47,39 @@ def process_excel():
         "115,324", "82,992", "105,428", "64,202", "63,596", "139,748"
     ]
 
-    # Create the dictionary mapping zip codes to median incomes
+    #Create the dictionary mapping zip codes to median incomes
     zip_to_income = dict(zip(zip_codes, median_incomes))
 
-    # Define the condition to create a boolean series to help filter out columns that need to be dropped:
+    #Define the condition to create a boolean series to help filter out columns that need to be dropped:
     condition = ~df.columns.str.startswith('Unnamed')
     condition = condition | (df.columns == df.columns[0])
 
-    # Apply the condition to select columns
+    #Use the boolean series to filter out the unnecessary columns.
     df = df.loc[:, condition]
 
+    #Drop other rows with unnecessary data.
     df = df.drop([0])
     df = df.drop(df.index[10:])
 
-    # Convert the dictionary to a DataFrame and ensure it matches the column structure
+    #Convert the dictionary into a dataframe
     income_df = pd.DataFrame([zip_to_income])
 
-    # Add the new row to the original dataframe
+    #Add the new median income column as the first column
     df = pd.concat([income_df, df], ignore_index=True)
 
-    # Transpose the DataFrame so that zip codes are in the leftmost column
+    #Transpose the DataFrame so that each zip code is a row
     df_transposed = df.transpose()
 
-    # Set the first row (which contains the zip codes) as the new header
+    #Set the first row to be the new headers
     df_transposed.columns = df_transposed.iloc[0]
 
-    # Drop the first row, which is now the header row
+    #Drop the first row, which is now the header row
     df_transposed = df_transposed.drop(df_transposed.index[0])
 
-    # Reset the index to make it a regular column
+    #Reset the index
     df_transposed = df_transposed.reset_index()
 
-    # Rename other columns (update with your desired names)
+    #Rename other columns to clarify data
     new_column_names = {
         'index': 'zipcode',
         'White': 'White Households',
@@ -77,27 +92,33 @@ def process_excel():
         'Hispanic or Latino origin (of any race)': 'Hispanic or Latino origin Households',
         'Median Income': 'Median Household income (Dollars)'
     }
+    #Update the names and drop unneeded data
     df_transposed = df_transposed.rename(columns=new_column_names)
     df_transposed.drop(["White alone, not Hispanic or Latino", "Households"], inplace=True, axis=1)
 
-    # Remove the first 6 characters from every value in the "Zip Code" column
+    #Isolate the zip code for later merging and parse it to an int
     df_transposed['zipcode'] = df_transposed['zipcode'].str[6:].astype(int)
     df_transposed['zipcode'] = df_transposed['zipcode'].astype(int)
 
+    #Return the dataframe for merging
     return df_transposed
 
-    # Export the transposed DataFrame to a new Excel file
-    df_transposed.to_csv('data/cleaned_file.csv', index=True)
 
-    print("The transposed file has been saved as 'cleaned_file.csv'")
+"""
+This function handles the CSV file processing. It takes a CSV file that also contains information about the demographic data in Chicago
+by zip codes and translates it into a dataframe for later merging. The CSV was found on census.gov and the data pertains to 
+population and age information about each zip code in Chicago. It gives the amount of people total and per age range in the given 
+zip code. We used pandas to clean the data and return it back to main. 
+"""
 
-# Function to handle CSV file processing
+
 def process_csv():
-    # Specify the CSV file path
+    # Create the file path variable
     file_path_csv = "data/demographics_by_zip.csv"
+    # Create dataframe with CSV data
     df2 = pd.read_csv(file_path_csv)
 
-    # Filter the columns to keep only "Label (Grouping)" and those ending with "!!Total!!Estimate"
+    # Filter the columns to keep only the needed data
     columns_to_keep = []
     for col in df2.columns:
         if col.endswith('!!Total!!Estimate'):
@@ -105,31 +126,31 @@ def process_csv():
 
     columns_to_keep = ['Label (Grouping)'] + columns_to_keep
 
-    # Select only the desired columns
+    # Filter data to needed columns
     df2 = df2[columns_to_keep]
+    # Drop unnecessary rows
     df2 = df2.drop(df2.index[20:])
     df2 = df2.drop([1])
-    df2.loc[1:, 'Label (Grouping)'] = df2.loc[1:, 'Label (Grouping)'].str[8:]
 
+    # Cut extra info out of strings to prepare for later merging
+    df2.loc[1:, 'Label (Grouping)'] = df2.loc[1:, 'Label (Grouping)'].str[8:]
     df2.columns = df2.columns.str.slice(start=6, stop=11)
 
-
-
-    # Reset the index to ensure the headers are properly shifted to the first column when transposed
+    # Reset the index
     df2 = df2.reset_index()
 
-    # Transpose the DataFrame
+    # Transpose df2
     df2_transposed = df2.transpose()
 
-    # Set the first row as the header (it was originally the column names)
+    # Set the first row as the header
     df2_transposed.columns = df2_transposed.iloc[1]
 
-    # Drop the first row as it's now redundant
+    # Drop the first row, which is now the header row
     df2_transposed = df2_transposed.drop(df2_transposed.index[0:2])
-
+    # Reset the index
     df2_transposed = df2_transposed.reset_index()
 
-    # Create a dictionary to rename the age group columns to indicate they are population counts
+    # Create a dictionary to rename the age group columns to better indicate they are population counts
     age_group_rename = {
         'index': 'zipcode',
         'Under 5 years': 'Population Under 5 years',
@@ -152,19 +173,12 @@ def process_csv():
         '85 years and over': 'Population 85 years and over'
     }
 
-    # Now, use this dictionary to rename the columns in your DataFrame
+    # Update the df with the new column names
     df2_transposed = df2_transposed.rename(columns=age_group_rename)
-
+    # Parse the zip code strings to ints for later merging
     df2_transposed['zipcode'] = df2_transposed['zipcode'].astype(int)
 
-
-
-    # Specify the output CSV file path
-    output_csv_path = "data/filtered_demographics_by_zip.csv"
-
+    # Return the dataframe for merging
     return df2_transposed
 
-    # Write the filtered DataFrame to a new CSV file
-    df2_transposed.to_csv(output_csv_path, index=True)
 
-    print(f"Filtered data has been saved to {output_csv_path}")

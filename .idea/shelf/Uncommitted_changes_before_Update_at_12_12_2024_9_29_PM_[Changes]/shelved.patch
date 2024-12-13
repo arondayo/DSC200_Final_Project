@@ -1,0 +1,84 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\"\"\"\r\nGroup 1 Final Project: Steven Weil, Aaron Anderson\r\nChicago, Illinois\r\n12/12/2024\r\nDSC 200\r\n\r\n\r\n\"\"\"\r\n\r\n\r\nfrom api_housing_trends import process_api\r\nfrom demographic_by_zip import process_excel, process_csv\r\nfrom government_policy_report import pdf_processor\r\nimport pandas as pd\r\n\r\nfrom merge_data import merge_data\r\nfrom scrape_cleaning import scrape_clean\r\n\r\n\r\ndef main():\r\n\r\n    print(\"Data processing has begun...\\n\")\r\n\r\n    #Process all 5 types of data\r\n    df1 = process_excel()\r\n    df2 = process_csv()\r\n    df3 = process_api()\r\n    df4 = scrape_clean()[['zipcode','owned_property_avg_price','rental_property_avg_price']]\r\n\r\n\r\n    #Mege Data in single CSV\r\n    merged_data = merge_data(df1, df2, df3, df4)\r\n\r\n\r\n    #Output final CSV\r\n    final_csv_path = \"data/final_csv.csv\"\r\n    merged_data.to_csv(final_csv_path, index=False)\r\n\r\n    #Process Pdf\r\n    final_pdf_path = \"data/final_pdf.csv\"\r\n    df_pdf = pdf_processor()\r\n    df_pdf.to_csv(final_pdf_path, index=False)\r\n\r\n    #Output Final PDF\r\n\r\n    print(\"\\nData processing complete. Output Files Final_CSV.csv and Final_PDF.csv have been created!\")\r\n    print(\"Have a great day!\")\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    main()
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 6638e4ad64ff6170ac8de7000f74a6f809c44650)
++++ b/main.py	(date 1734047592536)
+@@ -6,7 +6,7 @@
+ 
+ 
+ """
+-
++from heapq import merge
+ 
+ from api_housing_trends import process_api
+ from demographic_by_zip import process_excel, process_csv
+@@ -30,12 +30,14 @@
+ 
+     #Mege Data in single CSV
+     merged_data = merge_data(df1, df2, df3, df4)
++    merged_data.fillna("N/A", inplace=True)
+ 
+ 
+     #Output final CSV
+     final_csv_path = "data/final_csv.csv"
+     merged_data.to_csv(final_csv_path, index=False)
+ 
++
+     #Process Pdf
+     final_pdf_path = "data/final_pdf.csv"
+     df_pdf = pdf_processor()
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"432175e3-6643-4ebf-903d-55e51a6cf01f\" name=\"Changes\" comment=\"Created merge_data.py and updated others\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/data/final_csv.csv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/data/final_csv.csv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/main.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/main.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/merge_data.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/merge_data.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;StevenWeil&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/arondayo/DSC200_Final_Project&quot;,\r\n    &quot;accountId&quot;: &quot;3a61ac81-f697-48aa-abc7-26aba6bbc1c7&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 2\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2ptjq1Hy9x1tMbJsUeXm7d5rRAt\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Python.api_housing_trends.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.demographic_by_zip.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.government-policy-report.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.government_policy_report.executor&quot;: &quot;Run&quot;,\r\n    &quot;Python.main.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-PY-242.20224.347\" />\r\n        <option value=\"bundled-python-sdk-c2d6afa66fbe-39cff9de6eef-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.20224.347\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"432175e3-6643-4ebf-903d-55e51a6cf01f\" name=\"Changes\" comment=\"\" />\r\n      <created>1733592453033</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1733592453033</updated>\r\n      <workItem from=\"1733978763697\" duration=\"8815000\" />\r\n      <workItem from=\"1734028435326\" duration=\"7503000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1733989155092</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1733989155092</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Created merge_data.py and updated others\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1734046452926</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1734046452926</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed.\" />\r\n    <MESSAGE value=\"Created merge_data.py and updated others\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Created merge_data.py and updated others\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/DSC200_Final_Project$api_housing_trends.coverage\" NAME=\"api_housing_trends Coverage Results\" MODIFIED=\"1734045495533\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/DSC200_Final_Project$main.coverage\" NAME=\"main Coverage Results\" MODIFIED=\"1734047067206\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/DSC200_Final_Project$demographic_by_zip.coverage\" NAME=\"demographic_by_zip Coverage Results\" MODIFIED=\"1734045256953\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/DSC200_Final_Project$merge_data.coverage\" NAME=\"merge_data Coverage Results\" MODIFIED=\"1734044062296\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n    <SUITE FILE_PATH=\"coverage/DSC200_Final_Project$government_policy_report.coverage\" NAME=\"government-policy-report Coverage Results\" MODIFIED=\"1734028722898\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6638e4ad64ff6170ac8de7000f74a6f809c44650)
++++ b/.idea/workspace.xml	(date 1734048108138)
+@@ -4,11 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="432175e3-6643-4ebf-903d-55e51a6cf01f" name="Changes" comment="Created merge_data.py and updated others">
++    <list default="true" id="432175e3-6643-4ebf-903d-55e51a6cf01f" name="Changes" comment="Added in final steps of merge file">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/data/final_csv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/final_csv.csv" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/merge_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/merge_data.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -98,7 +96,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1734046452926</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Added in final steps of merge file">
++      <option name="closed" value="true" />
++      <created>1734047378889</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1734047378889</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -107,7 +113,8 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Pushing 3 python files and accompanying data files. The three python files fulfill the needs for API access, excel files, and PDF files. I still need to do some extra cleaning and touchups but want to get some pushed." />
+     <MESSAGE value="Created merge_data.py and updated others" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Created merge_data.py and updated others" />
++    <MESSAGE value="Added in final steps of merge file" />
++    <option name="LAST_COMMIT_MESSAGE" value="Added in final steps of merge file" />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/DSC200_Final_Project$api_housing_trends.coverage" NAME="api_housing_trends Coverage Results" MODIFIED="1734045495533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
